@@ -1,0 +1,36 @@
+body{
+	background-color: #ff8a00;
+}
+
+.btn{
+    background-color: #ff8a00;
+    border: #ffb611;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+h1{
+	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+	color: #ff8a00;
+}
+
+.btn:hover{
+     background: #ffb611;
+}
+
+.btn:active {
+	background: #ffb611;
+}
+
+label{
+    text-align: left;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
