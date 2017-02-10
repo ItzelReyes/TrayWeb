@@ -1,5 +1,6 @@
 body{
-	background: #ff8a00;
+	background-image: url(/images/comida1.png);
+    background-repeat: no-repeat;
 }
 
 .jumbotron .btn {
@@ -38,6 +39,8 @@ label{
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  background-color:floralwhite;
+
 }
 
 .jumbotron .btn {
