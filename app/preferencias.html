@@ -27,13 +27,50 @@
 
       <form>
 
-        <input type="checkbox" name="preferencias" value="Res">Res<br>
-        <input type="checkbox" name="preferencias" value="Pescado">Pescado<br>
-        <input type="checkbox" name="preferencias" value="Pollo">Pollo<br>
-        <input type="checkbox" name="preferencias" value="Vegetariano">Vegetariano 
+        <div class="col-sm-6 col-md-offset-3">
+          <input type="checkbox" name="preferencias" value="Res">Res<br>
+          <input type="checkbox" name="preferencias" value="Pescado">Pescado<br>
+          <input type="checkbox" name="preferencias" value="Pollo">Pollo<br>
+          <input type="checkbox" name="preferencias" value="Vegetariano">Vegetariano<br>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="col-sm-4">
+          <h2>Elérgenos</h2>
+
+              <div class="form-group">
+                  <label for="exampleSelect1">Elige una opción</label>
+                    <select class="form-control" id="tPasta">
+                        <option value="pasta 1">Glúten</option>
+                        <option value="pasta 2">Cacahuate</option>
+                        <option value="pasta 3">Lactosa</option>
+                        <option value="pasta 4">Huevos</option>
+                        <option value="pasta 3">Leche</option>
+                        <option value="pasta 4">Soya</option>
+                    </select>
+              </div>
+        </div>
+
+        <div class="col-sm-4 col-md-6">
+          <h2>Enfermedades</h2>
+
+              <div class="form-group">
+                  <label for="exampleSelect1">Elige una opción</label>
+                    <select class="form-control" id="tPasta">
+                        <option value="pasta 1">Colesterol</option>
+                        <option value="pasta 2">Diabetes</option>
+                        <option value="pasta 3">Hipertensión</option>
+                        <option value="pasta 4">Triglicéridos</option>
+                    </select>
+              </div>
+        
+        </div>
 
         <p>
-          <a class="btn btn-lg btn-success" href="favoritos.html">Log  in <span ></span></a>
+          <a class="btn btn-lg btn-success center-block" href="favoritos.html">Log  in <span ></span></a>
         </p>
 
       </form>
