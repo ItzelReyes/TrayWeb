@@ -6,7 +6,8 @@ version 0.15.1.
 
 =======
 # Aplicación Web "TRAY"
-## Desarrolladores:
-Daniela Martín Martínez - Matrícula: A01323113 GitHub: dannymartinm
-Itzel Reyes Pérez - Matrícula: A01337712 GitHub: itzelreyes
-Alejandro Cortizo Franza - Matrícula: A01675872 GitHub: sharkxp2003
+#Desarrolladores:
+
+##Daniela Martín Martínez - Matrícula: A01323113 GitHub: dannymartinm
+##Itzel Reyes Pérez - Matrícula: A01337712 GitHub: itzelreyes
+##Alejandro Cortizo Franza - Matrícula: A01675872 GitHub: sharkxp2003
