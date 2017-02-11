@@ -31,6 +31,7 @@ img{
 	align-self: "middle";
 }
 
-.row {
-    align-items: center;
+.thumb {
+    background: white;
+    border: 1px solid #ddd;
 }
