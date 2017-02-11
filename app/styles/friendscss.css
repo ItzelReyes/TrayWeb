@@ -1,0 +1,11 @@
+ #wrapper * { -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -ms-transition: all 1s ease-in-out; transition: all 1s ease-in-out; }
+a {text-decoration:none;}
+
+      body {background-color: rgb(224, 224, 224);}
+    table#TixManagementContent  { background-color: rgb(252, 252, 253); }
+    table { background-color: rgb(224, 224, 224); }
+    
+    a:active, a:focus, .btn:active, .btn:focus {outline: 0;}
+      
+    #wrapper {margin:0px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 0px;}
+    #wrapper * { -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -ms-transition: all 1s ease-in-out; transition: all 1s ease-in-out; }
