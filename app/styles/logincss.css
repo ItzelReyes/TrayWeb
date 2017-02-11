@@ -8,7 +8,6 @@
 body {
   padding: 0;
 }
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -80,4 +79,13 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.Absolute-center {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.set-width {
+  width: 220px;
 }

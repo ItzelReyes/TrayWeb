@@ -30,3 +30,7 @@ h2{
 img{
 	align-self: "middle";
 }
+
+.row {
+    align-items: center;
+}
