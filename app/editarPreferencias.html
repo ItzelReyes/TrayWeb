@@ -43,51 +43,62 @@
       
       
       
-<div class="container">
-    <div class="jumbotron">
-      
-            <div class="center">
-                <h2 class="logotipo">Editar</h2>
-                <p class="lead">
-                    <img src="images/meal.png" alt="I'm Yeoman"><br>
-                </p>
-                <br>
-                <br>
-                <hr class="style2">
-            </div>       
-            <br>
-
-        
-        
+ <div class="container">
+    
+      <div class="jumbotron">
+          
         <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <h2>Edita tus preferencias</h2>
+            <div class="col-md-4 col-sm-6">
+            
+            <form class="form">
+              <h2>Edita tus preferencias</h2>
+              <input type="checkbox" name="preferencias" value="Res">Res<br>
+              <input type="checkbox" name="preferencias" value="Pescado">Pescado<br>
+              <input type="checkbox" name="preferencias" value="Pollo">Pollo<br>
+              <input type="checkbox" name="preferencias" value="Vegetariano">Vegetariano<br>            
+            </form>
             </div>
-            <div class="col-md-6 col-sm-12">
-              <form>
-                <input type="checkbox" name="preferencias" value="Res">Res<br>
-                <input type="checkbox" name="preferencias" value="Pescado">Pescado<br>
-                <input type="checkbox" name="preferencias" value="Pollo">Pollo<br>
-                <input type="checkbox" name="preferencias" value="Vegetariano">Vegetariano 
-              </form>                
-            </div>            
-        </div>
-        <br>
-        <div class="row center">
-            <p>
-              <a class="btn btn-lg btn-success" href="mostrarPreferencias.html">Guardar<span ></span></a>
-            </p>            
-        </div>
-        
-
-        
-        
-        
+            
+            <div class="col-md-4 col-sm-6">
+       
+            <div class="form-group">
+                <h2>Alérgenos</h2>  
+                  <label for="exampleSelect1">Elige una opción</label>
+                    <select class="form-control" id="tPasta">
+                        <option value="pasta 1">Glúten</option>
+                        <option value="pasta 2">Cacahuate</option>
+                        <option value="pasta 3">Lactosa</option>
+                        <option value="pasta 4">Huevos</option>
+                        <option value="pasta 3">Leche</option>
+                        <option value="pasta 4">Soya</option>
+                    </select>
+              </div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6">
       
+            <h2>Enfermedades</h2>
+                <div class="form-group">
+                  <label for="exampleSelect1">Elige una opción</label>
+                    <select class="form-control" id="tPasta">
+                        <option value="pasta 1">Colesterol</option>
+                        <option value="pasta 2">Diabetes</option>
+                        <option value="pasta 3">Hipertensión</option>
+                        <option value="pasta 4">Triglicéridos</option>
+                    </select>
+              </div>
+            </div>     
+        </div>
+
+        <p class="center">
+          <br>
+          <a class="btn btn-lg btn-success center-block" href="perfil.html">Finalizar <span ></span></a>
+        </p>
 
 
+    
   </div>
-      </div>
+</div>
       
       
                   <div class="footer">
