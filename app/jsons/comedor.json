@@ -1,0 +1,22 @@
+{
+    "comedor": {
+        "id": 001,
+        "nombre": "ITESM CCM",
+        "horario": {
+                "manana": true,
+                "tarde": true,
+                "noche": false
+            }, 
+        "telefonos": {
+                    "fijo1": "55879834",
+                    "otro": "5589112345"
+         },
+        "ubicacion": [
+                {
+                    "latitud": 19.283431,
+                    "longitud": -99.13174,
+                    "APIkey": "ksjdieookkkiqw78239BhW2koijd"
+                }
+        ]
+    }
+}
