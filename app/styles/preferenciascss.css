@@ -43,3 +43,16 @@ input[type=checkbox] {
 .dropdown:hover .dropbtn {
     background-color: #ff8a00;
 }
+
+.center {
+    text-align: center;
+}
+
+.Absolute-center {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.container {
+    padding-top: 60px;
+}

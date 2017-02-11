@@ -1,5 +1,11 @@
-label{
-	font-size: 200%;
-	text-align: left;
-	float: left;
+
+
+
+.center {
+    text-align: center;
+}
+
+
+.rightSide {
+    padding-left: 30%;
 }

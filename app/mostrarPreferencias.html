@@ -7,32 +7,80 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="styles/mycss.css">
-    <link rel="stylesheet" type="text/css" href="styles/preferenciascss.css">
   </head>
 
   <body>
-  <div class="container">
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="favoritos.html"><img src="images/meal.png" alt="I'm Yeoman" width="30"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="app/views/main.html">Inicio</a></li>
+              <li><a href="perfil.html">Mi perfil</a></li>
+              <li><a href="buscarComedor.html">Buscar establecimientos</a></li>              
+              <li><a href="favoritos.html">Favoritos</a></li>
+              <li><a href="preferencias.html">Food facts</a></li>
+              <li><a href="friends.html">Amigos</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/">Cerrar Sesion</a></li>
+            </ul>  
+          </div>
+        </div>
+      </div>
+    </div>      
+        
+      
+      
+      
+      
+<div class="container">
     <div class="jumbotron">
-      <h1>TRAY!</h1>
-    
-      <p class="lead">
-        <img src="images/meal.png" alt="I'm Yeoman"><br>
-        Reserva con aticipación y ayuda a tu ciudad.
-      </p>
-      <br>
-      <br>
+      
+            <div class="center">
+                <h2 class="logotipo">Mis preferencias</h2>
+                <p class="lead">
+                    <img src="images/meal.png" alt="I'm Yeoman"><br>
+                </p>
+                <br>
+                <br>
+                <hr class="style2">
+            </div>       
+            <br>
+      
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <h2>Tus preferencias:</h2>
+            </div>
+            <div class="col-sm-6 col-md-6 center">
+                <p> <label>Res</label> </p>
+                <p> <label>Pescado</label> </p>
+            </div>            
+        </div>    
 
-    <div class="col-sm-6 col-md-offset-3">
-      <h2>Tus preferencias</h2>
+        <br>
+        <div class="row center">
+            <p>
+              <a class="btn btn-lg btn-success" href="editarPreferencias.html">Editar<span ></span></a>
+            </p>            
+        </div>
 
-      <p> <label>Res</label> </p>
-      <p> <label>Pescado</label> </p>
-
-        <p>
-          <a class="btn btn-lg btn-success" href="editarPreferencias.html">Editar<span ></span></a>
-        </p>
 
     </div>
   </div>
+      
+          <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Tray team</p>
+      </div>  
   </body>
 </html>

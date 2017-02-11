@@ -7,24 +7,59 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="styles/mycss.css">
-    <link rel="stylesheet" type="text/css" href="styles/logincss.css">
+    <link rel="stylesheet" type="text/css" href="styles/formularios.css">
   </head>
 
   <body>
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="favoritos.html"><img src="images/meal.png" alt="I'm Yeoman" width="30"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="favoritos.html">Inicio</a></li>
+              <li><a href="perfil.html">Mi perfil</a></li>
+              <li><a href="buscarComedor.html">Buscar establecimientos</a></li>              
+              <li><a href="favoritos.html">Favoritos</a></li>
+              <li><a href="preferenciasReporte.html">Food facts</a></li>
+              <li><a href="friends.html">Amigos</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/">Cerrar Sesion</a></li>
+            </ul>  
+          </div>
+        </div>
+      </div>
+    </div>      
+        
+      
+      
+      
   <div class="container">
+            
     <div class="jumbotron">
-      <h1>TRAY!</h1>
-    
-      <p class="lead">
-        <img src="images/meal.png" alt="I'm Yeoman"><br>
-        Reserva con aticipación y ayuda a tu ciudad.
-      </p>
-      <br>
-      <br>
+      
+        <div class="center">
+                <h1>TRAY!</h1>
 
-      <h2>Modifica tus datos</h2>
+              <p class="lead">
+                <img src="images/meal.png" alt="I'm Yeoman"><br>
+              </p>
+              <br>
+              <br>
+        </div>
 
-      <form>
+      <h2 class="center">Modifica tus datos</h2>
+
+      <form class="Absolute-center">
         <div class="form-group">
           <label for="example-search-input" class="col-2 col-form-label">Nombre:</label>
           <input class="form-control" type="text" id="nombre">
@@ -55,11 +90,26 @@
           <input class="form-control" type="Password" id="password">
         </div>
 
-        <p>
-          <a class="btn btn-lg btn-success" href="perfil.html">Guardar<span ></span></a>
-        </p>
-
+          <div class="row center">
+            <p class="col-md-6 col-xs-12">
+                <a class="btn btn-lg btn-success" href="perfil.html">Cancelar<span ></span></a>
+            </p>
+            <p class="col-md-6 col-xs-12">
+                <a class="btn btn-lg btn-success" href="perfil.html">Guardar<span ></span></a>
+            </p>
+          </div>
       </form>
   </div>
+</div>
+      
+      
+      <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Tray team</p>
+      </div>
+      </div>
+      
+      
+      
   </body>
 </html>
