@@ -24,26 +24,26 @@
          "preferencias":[
          {
             "comida": {
-                "res": "Si",
-                "pescado": "No",
-                "pollo": "Si",
-                "vegetariano": "No"
+                "res": true,
+                "pescado": false,
+                "pollo": true,
+                "vegetariano": false
             },        
 
             "alergias": 
                 {
-                    "gluten": "Si",
-                    "cacahuate": "No",
-                    "lactosa": "No",
-                    "huevos": "No",
-                    "almidon": "No",
-                    "soya": "No"
+                    "gluten": true,
+                    "cacahuate": false,
+                    "lactosa": false,
+                    "huevos": false,
+                    "almidon": false,
+                    "soya": false
                 },
             "enfermedades": {
-                    "colesterol": "No",
-                    "diabetes": "No",
-                    "hipertension": "No",
-                    "trigliceridos": "No"
+                    "colesterol": false,
+                    "diabetes": false,
+                    "hipertension": false,
+                    "trigliceridos": true
             }
         }
         ] 
