@@ -1,0 +1,51 @@
+{
+    "usuario": {
+        "id": 001,
+        "nombre": "Itzel",
+        "apellido": "Reyes",
+        "telefonos": {
+                    "fijo": "55879834",
+                    "movil": "5589112345"
+         },
+        "email": "itzel@myemail.com",
+        "nickname": "itzelitareyes",
+        "password": "d0be2dc421be4fcd0172e5afceea3970e2f3d940",
+        "friends": [
+                {
+                    "id": 202,
+                    "nombre": "Daniela",
+                    "nickname": "danimartin",
+                    "telefonos":{
+                        "fijo": "55234789",
+                        "movil": "5589097699"
+                    }
+                }
+        ],
+         "preferencias":[
+         {
+            "comida": {
+                "res": "Si",
+                "pescado": "No",
+                "pollo": "Si",
+                "vegetariano": "No"
+            },        
+
+            "alergias": 
+                {
+                    "gluten": "Si",
+                    "cacahuate": "No",
+                    "lactosa": "No",
+                    "huevos": "No",
+                    "almidon": "No",
+                    "soya": "No"
+                },
+            "enfermedades": {
+                    "colesterol": "No",
+                    "diabetes": "No",
+                    "hipertension": "No",
+                    "trigliceridos": "No"
+            }
+        }
+        ] 
+    }
+}
