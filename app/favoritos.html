@@ -8,22 +8,52 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="styles/mycss.css">
     <link rel="stylesheet" type="text/css" href="styles/favoritoscss.css">
+      
   </head>
 
   <body>
-    <div class="container" id="tourpackages-carousel">
+    
+          <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="#/">claseAngular</a>
+          </div>
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="app/views/main.html">Inicio</a></li>
+              <li><a ng-href="perfil.html">Mi perfil</a></li>
+              <li><a ng-href="#/index.html">Favoritos</a></li>
+              <li><a ng-href="#/">Food facts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      
+      <div class="container" id="tourpackages-carousel">
       <div class="jumbotron">
         <h2>Favoritos!</h2>
       
+        <!-- First fold -->
         <p class="lead">
           <img src="images/meal.png"alt="I'm Yeoman" height="120" width="120"><br>
         </p>
         <br>
         <br>
-
-        <div class="row">
+        <!-- end of First Fold -->
+        
           
-          <div class="col-xs-18 col-sm-6 col-md-3">
+          <!-- Contenedor de los thumbnails -->
+          <div class="row">
+            <div class="col-xs-18 col-sm-6 col-md-3">
             <div class="thumb">
                 <div class="caption">
                   <h4>Cafetería de Universidad La Salle</h4>
@@ -33,7 +63,7 @@
             </div>
           </div>
 
-          <div class="col-xs-18 col-sm-6 col-md-3">
+            <div class="col-xs-18 col-sm-6 col-md-3">
             <div class="thumb">
                 <div class="caption">
                   <h4>Cafetería del Tecnológico de Monterrey</h4>
@@ -42,7 +72,7 @@
             </div>
           </div>
 
-          <div class="col-xs-18 col-sm-6 col-md-3">
+            <div class="col-xs-18 col-sm-6 col-md-3">
             <div class="thumb">
                 <div class="caption">
                   <h4>Restaurante Applebee's</h4>
@@ -51,8 +81,9 @@
               </div>
             </div>
           </div>
+          </div>
+          <!-- end contenedor de los thumbnails -->
           
-        </div><!-- End row -->
           <br>
           <br>
           <p>
@@ -62,5 +93,12 @@
           </p>
       </div>    
     </div><!-- End container -->
+    
+      <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Tray team</p>
+      </div>
+    
+    </div>
   </body>
 </html>
