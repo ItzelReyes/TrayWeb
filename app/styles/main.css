@@ -5,8 +5,11 @@
   padding: 0.2em 0;
 }
 
-body {
-  padding: 0;
+body{
+    padding: 0px;
+	background-image: url(/images/comida1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -19,7 +22,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 }
 /* Make the masthead heading the same height as the navigation */
@@ -32,9 +34,11 @@ body {
 
 /* Custom page footer */
 .footer {
+  background-color: black;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  height: -40px;
 }
 
 .container-narrow > hr {
@@ -80,4 +84,8 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.container {
+    padding-top: 60px;
 }

@@ -1,6 +1,15 @@
 body{
 	background-image: url(/images/comida1.png);
     background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+  background-color: black;
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  height: -40px;
 }
 
 .jumbotron .btn {
