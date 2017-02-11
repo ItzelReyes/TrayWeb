@@ -30,3 +30,8 @@ h2{
 img{
 	align-self: "middle";
 }
+
+.thumb {
+    background: white;
+    border: 1px solid #ddd;
+}
