@@ -1,15 +1,5 @@
-<!doctype html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <title>Tray</title>
-    <link rel="stylesheet" type="text/css" href="app/styles/mycss.css">
-
-  </head>
-
-  <body>
-<div class="jumbotron">
+<!-- Este jumbotron coloca el cuadrado de login y registro, se puede separar como template-->      
+<div class="jumbotron" ng-controller="MainCtrl">
   <h1>TRAY!</h1>
   <p class="lead">
     <img src="images/meal.png" alt="I'm Yeoman"><br>
@@ -18,8 +8,8 @@
   <br>
   <br>
   <p>
-      <a class="btn btn-lg btn-success" ng-href="formulario.html">Sign up<span ></span></a> 
-      <a class="btn btn-lg btn-success" ng-href="login.html">Log  in <span ></span></a>
+      <a class="btn btn-lg btn-success" ng-href='#!/singup'>Sign up<span ></span></a> 
+      <a class="btn btn-lg btn-success" ng-href='#!/login'>Log  in <span ></span></a>
   </p>
 
   <p>
@@ -32,7 +22,10 @@
 
 </div>
 
-<div class="row marketing">
-</div>
-</body>
-</html>
+      <h1>{{text}}</h1>
+      
+      
+      
+      
+      
+

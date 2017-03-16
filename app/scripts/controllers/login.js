@@ -7,11 +7,31 @@
  * # MainCtrl
  * Controller of the claseAngularApp
  */
-angular.module('claseAngularApp')
-  .controller('LoginCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+myApp.controller('LoginCtrl',['$scope', function ($scope) {
+    
+    var modelo = {
+        login : {
+            nombreUsuario: "",
+            password: ""
+        }
+        
+    };
+    
+    var nick;
+    
+    $scope.modelo = modelo;
+    
+    $scope.getNickname = function () {
+        $scope.modelo.login.nombreUsuario = $scope.nick
+    }
+    
+    $scope.getPassword = function() {
+        $scope.modelo.login.password = $scope.pass
+    }
+    
+    
+    $scope.applyLogin = function () {
+        //Se toman los valores del login y se hace algo
+    }
+    
+  }]);

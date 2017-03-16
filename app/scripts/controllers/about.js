@@ -7,8 +7,7 @@
  * # AboutCtrl
  * Controller of the claseAngularApp
  */
-angular.module('claseAngularApp')
-  .controller('AboutCtrl', function () {
+myApp.controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

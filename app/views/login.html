@@ -1,0 +1,29 @@
+
+<div class="jumbotron" ng-controller="LoginCtrl">
+    <h1>TRAY!</h1>
+    <p class="lead">
+        <img src="images/meal.png" alt="I'm Yeoman"><br>
+        Reserva con aticipación y ayuda a tu ciudad.
+    </p>
+  <br>
+  <br>
+  <div class="Absolute-center">
+    <div class="form-group input-group">
+        <span class="input-group-addon">
+            <i class="glyphicon glyphicon-user"></i>
+        </span>
+        <input class="form-control" ng-model="nick" type="text" id="nickname" placeholder="Nickname">
+            </div>
+                <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
+                    </span>
+                    <input class="form-control" ng-model="pass" type="password" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <p><a class="btn btn-lg btn-success" ng-click="applyLogin()">Log in <span ></span></a></p>
+                </div>
+  </div>    
+</div>
+
+
+
