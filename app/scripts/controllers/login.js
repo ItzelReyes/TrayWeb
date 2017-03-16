@@ -22,16 +22,28 @@ myApp.controller('LoginCtrl',['$scope', function ($scope) {
     $scope.modelo = modelo;
     
     $scope.getNickname = function () {
-        $scope.modelo.login.nombreUsuario = $scope.nick
+        
+        if ($scope.nick == undefined) {
+            alert("Error");
+        } else {
+            $scope.modelo.login.nombreUsuario = $scope.nick;
+        }
     }
     
     $scope.getPassword = function() {
-        $scope.modelo.login.password = $scope.pass
+        
+        if ($scope.pass == undefined) {
+            alert("Error");//Highlight en rojo y mensaje aclarativo de que no se introdujo el valor
+        } else {
+            $scope.modelo.login.password = $scope.pass
+        }
+        
     }
     
     
     $scope.applyLogin = function () {
         //Se toman los valores del login y se hace algo
+        $scope.getPassword();
     }
     
   }]);

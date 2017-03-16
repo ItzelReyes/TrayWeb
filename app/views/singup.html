@@ -1,75 +1,51 @@
-<!doctype html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <title>Tray</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="styles/mycss.css">
-    <link rel="stylesheet" type="text/css" href="styles/formularios.css">
+<!-- Inicio del FirsFold -->
+<div class="jumbotron" ng-controller="SingUpCtrl">
+    <h1>TRAY!</h1>
+    <p class="lead">
+        <img src="images/meal.png" alt="I'm Yeoman"><br>
+        Reserva con aticipación y ayuda a tu ciudad.
+    </p>
+  <br>
+  <br>
+  <h2 class="center">Ingresa tus datos</h2>
+<!-- Fin del FirstFold -->
     
-  </head>
+<!-- Form de registro -->    
+  <form class="Absolute-center">
+    <div class="form-group">
+      <label for="example-search-input" class="col-2 col-form-label control-label">Nombre:</label>
+      <input class="form-control" ng-model="nombre" type="text" id="nombre" required>
+    </div>
 
-  <body>
-  
-      
-      
-  <div class="container">
-    <div class="jumbotron">
-      <div class="center">
-        <h1>TRAY!</h1>
-          <p class="lead">
-            <img src="images/meal.png" alt="I'm Yeoman"><br>
-            Reserva con aticipación y ayuda a tu ciudad.
-          </p>
-          <br>
-          <br>
-        </div>
-        
-        
-        
- 
+    <div class="form-group">
+      <label for="example-search-input" class="col-2 col-form-label">Apellidos:</label>
+      <input class="form-control" type="text" id="apellidos">
+    </div>
 
-      <h2 class="center">Ingresa tus datos</h2>
+    <div class="form-group">
+      <label for="example-search-input" class="col-2 col-form-label">Teléfono:</label>
+      <input class="form-control" type="text" id="telefono">
+    </div>
 
-      <form class="Absolute-center">
-        <div class="form-group">
-          <label for="example-search-input" class="col-2 col-form-label control-label">Nombre:</label>
-          <input class="form-control" type="text" id="nombre">
-        </div>
-    
-        <div class="form-group">
-          <label for="example-search-input" class="col-2 col-form-label">Apellidos:</label>
-          <input class="form-control" type="text" id="apellidos">
-        </div>
+    <div class="form-group">
+      <label for="example-search-input" class="col-2 col-form-label">E-mail:</label>
+      <input class="form-control" type="text" id="email">
+    </div>
 
-        <div class="form-group">
-          <label for="example-search-input" class="col-2 col-form-label">Teléfono:</label>
-          <input class="form-control" type="text" id="telefono">
-        </div>
-    
-        <div class="form-group">
-          <label for="example-search-input" class="col-2 col-form-label">E-mail:</label>
-          <input class="form-control" type="text" id="email">
-        </div>
+    <div class="form-group">
+      <label for="example-search-input" class="col-2 col-form-label">Nickname:</label>
+      <input class="form-control" type="text" id="nickname">
+    </div>
 
-        <div class="form-group">
-          <label for="example-search-input" class="col-2 col-form-label">Nickname:</label>
-          <input class="form-control" type="text" id="nickname">
-        </div>
-    
-        <div class="form-group">
-          <label for="example-search-input" class="col-2 col-form-label">Password:</label>
-          <input class="form-control" type="Password" id="password">
-        </div>
+    <div class="form-group">
+      <label for="example-search-input" class="col-2 col-form-label">Password:</label>
+      <input class="form-control" type="Password" id="password">
+    </div>
 
-        <p class="center">
-          <a class="btn btn-lg btn-success" href="preferencias.html">Next <span ></span></a>
-        </p>
+    <p class="center">
+      <a class="btn btn-lg btn-success" ng-click="getRegister()">Next <span ></span></a>
+    </p>
 
-      </form>
-  </div>
+  </form>
 </div>
-  </body>
-</html>
+<!-- Fin del Form de registro -->    
