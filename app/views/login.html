@@ -5,24 +5,27 @@
         <img src="images/meal.png" alt="I'm Yeoman"><br>
         Reserva con aticipación y ayuda a tu ciudad.
     </p>
-  <br>
-  <br>
-  <div class="Absolute-center">
-    <div class="form-group input-group">
-        <span class="input-group-addon">
-            <i class="glyphicon glyphicon-user"></i>
-        </span>
-        <input class="form-control" ng-model="nick" type="text" id="nickname" placeholder="Nickname">
+    <br>
+    <br>
+    <div class="Absolute-center">
+        <div class="form-group input-group">
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input class="form-control" ng-model="nick" type="text" id="nickname" placeholder="Nickname">
+        </div>
+
+        <form name="myForm">
+            <div class="form-group input-group" ng-class="{'has-error': myForm.pass.$invalid}">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
+                </span>
+                <input class="form-control" ng-model="pass" name="pass" type="password" id="password" placeholder="Password" ng-pattern="passPattern">
             </div>
-                <div class="form-group input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
-                    </span>
-                    <input class="form-control" ng-model="pass" type="password" id="password" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <p><a class="btn btn-lg btn-success" ng-click="applyLogin()">Log in <span ></span></a></p>
-                </div>
-  </div>    
+        </form>
+        <div class="form-group">
+            <p><a class="btn btn-lg btn-success" ng-click="applyLogin()">Log in <span ></span></a></p>
+        </div>
+    </div>    
 </div>
 
 

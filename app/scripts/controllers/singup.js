@@ -12,7 +12,7 @@ myApp.controller('SingUpCtrl',['$scope', function($scope) {
             password: ""
         }
     };
-    
+    $scope.passPattern = /^[a-zA-Z0-9]{8,15}/;
     $scope.modelo = modelo;
     
     var getNombre = function () {

@@ -11,7 +11,7 @@
 <!-- Fin del FirstFold -->
     
 <!-- Form de registro -->    
-  <form class="Absolute-center">
+  <form class="Absolute-center" name="myForm">
     <div class="form-group">
       <label for="example-search-input" class="col-2 col-form-label control-label">Nombre:</label>
       <input class="form-control" ng-model="nombre" type="text" id="nombre" required>
@@ -39,7 +39,7 @@
 
     <div class="form-group">
       <label for="example-search-input" class="col-2 col-form-label">Password:</label>
-      <input class="form-control" type="Password" id="password">
+      <input class="form-control" type="Password" name= "pass" id="password" ng-class="{'has-error': myForm.pass.$invalid}">
     </div>
 
     <p class="center">

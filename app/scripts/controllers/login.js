@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the claseAngularApp
  */
-myApp.controller('LoginCtrl',['$scope', function ($scope) {
+myApp.controller('LoginCtrl',['$scope','$location', function ($scope,$location) {
     
     var modelo = {
         login : {
@@ -20,11 +20,11 @@ myApp.controller('LoginCtrl',['$scope', function ($scope) {
     var nick;
     
     $scope.modelo = modelo;
-    
+    $scope.passPattern = /^[a-zA-Z0-9]{8,15}/;
     $scope.getNickname = function () {
         
         if ($scope.nick == undefined) {
-            alert("Error");
+            alert("Error de nickname");
         } else {
             $scope.modelo.login.nombreUsuario = $scope.nick;
         }
@@ -33,7 +33,7 @@ myApp.controller('LoginCtrl',['$scope', function ($scope) {
     $scope.getPassword = function() {
         
         if ($scope.pass == undefined) {
-            alert("Error");//Highlight en rojo y mensaje aclarativo de que no se introdujo el valor
+            alert("Error de password");//Highlight en rojo y mensaje aclarativo de que no se introdujo el valor
         } else {
             $scope.modelo.login.password = $scope.pass
         }
@@ -43,7 +43,9 @@ myApp.controller('LoginCtrl',['$scope', function ($scope) {
     
     $scope.applyLogin = function () {
         //Se toman los valores del login y se hace algo
+        $scope.getNickname();
         $scope.getPassword();
+        $location.path('/singup_preferences');
     }
     
   }]);
