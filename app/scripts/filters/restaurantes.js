@@ -10,7 +10,7 @@
  */
 angular.module('myApp')
   .filter('restaurantes', function () {
-  	return function(items, key, reverse) {
+  	return function(items, key, reverse, buttonF) {
     var resultado = [];
     angular.forEach(items, function(item) {
       resultado.push(item);
@@ -18,7 +18,7 @@ angular.module('myApp')
     resultado.sort(function (a, b) {
       return (a[key] > b[key] ? 1 : -1);
     });
-    if(reverse) resultado.reverse();
+    if(buttonF == true ) resultado.reverse();
     return resultado;
   };
 
