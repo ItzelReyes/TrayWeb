@@ -69,8 +69,8 @@
          <tr ng-repeat="comedor in modelo.usuarios">
             <td>{{comedor.nombre}}</td>
             <td>{{comedor.manana}}</td>
-            <td>{{comedor.TelFijo}}</td>
-            <td>{{comedor.TelOtro}}</td>
+            <td>{{comedor.friends.telefonos.fijo}}</td>
+            <td>{{comedor.preferencias.alergias.gluten}}</td>
          </tr>
       </tbody>
   </table>
