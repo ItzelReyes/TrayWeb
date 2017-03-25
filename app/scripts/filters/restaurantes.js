@@ -8,18 +8,20 @@
  * # restaurantes
  * Filter in the claseAngularApp.
  */
-angular.module('claseAngularApp')
+angular.module('myApp')
   .filter('restaurantes', function () {
-     return function(items, field, reverse) {
-    var filtered = [];
+  	return function(items, key, reverse) {
+    var resultado = [];
     angular.forEach(items, function(item) {
-      filtered.push(item);
+      resultado.push(item);
     });
-    filtered.sort(function (a, b) {
-      return (a[field] > b[field] ? 1 : -1);
+    resultado.sort(function (a, b) {
+      return (a[key] > b[key] ? 1 : -1);
     });
-    if(reverse) filtered.reverse();
-    return filtered;
+    if(reverse) resultado.reverse();
+    return resultado;
   };
 
   });
+
+ 
