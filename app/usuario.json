@@ -1,7 +1,8 @@
 {"usuarios":[
-    {"nombre": "ITESM","apellido": "Reyes","telefonos":
-        { "fijo": "telefonofijo", 
-        "movil": 23
+    {"nombre": "Itzel","apellido": "Reyes",
+        "telefonos":
+        { "fijo": "53213478", 
+        "movil": "5578925643"
         }, 
         "email": "itzel@myemail.com", "nickname": "itzelitareyes",
         "password": "d0be2dc421be4fcd0172e5afceea3970e2f3d940",

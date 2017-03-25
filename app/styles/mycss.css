@@ -76,8 +76,28 @@ h2.logotipo {
     text-decoration-style: solid;
 }
 
-
 .center {
     text-align: center;
     
 }
+
+table { 
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 640px;
+  /* Table reset stuff */
+  border-collapse: collapse; border-spacing: 0; 
+}
+    
+td, th {  border: 0 none; height: 30px; }
+      
+th {
+  /* Gradient Background */
+  background: linear-gradient(#333 0%,#444 100%);
+  color: #FFF; font-weight: bold;
+  height: 40px;
+}
+    
+td { background: #FAFAFA; text-align: center; }
+
+tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */

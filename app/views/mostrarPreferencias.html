@@ -57,26 +57,21 @@
                 <hr class="style2">
             </div>       
             <br>
-       <div class="row">
-        <div class="row">
 
+            <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
+                <h2>Comida</h2>
+                <hr class="solid">
+                <p> Res: {{usuario.preferencias.comida.res}}</p>
+                <p> Pollo: {{usuario.preferencias.comida.pollo}}</p>
+                <h2>Alergias</h2>
+                <hr class="solid"> 
+                <p> Pollo: {{usuario.preferencias.comida.pollo}}</p>
+                <h2>Enfermedades</h2>  
+                <hr class="solid"> 
+                <p>Triglicéridos: {{usuario.preferencias.enfermedades.trigliceridos}}</p>
 
-
-
-        <table class="table ">
-          <tbody>
-            <tr ng-repeat="comedor in modelo.usuarios">
-            <td>Res: {{comedor.preferencias.comida.res}}</td>
-            <td>Glúten: {{comedor.preferencias.alergias.gluten}}</td>
-            <td>Triglicéridos: {{comedor.preferencias.enfermedades.trigliceridos}}</td>
-            </tr>
-
-            <tr ng-repeat="comedor in modelo.usuarios">
-            <td>Pollo: {{comedor.preferencias.comida.pollo}}</td>
-            </tr>
-          </tbody>
-        </table>
-
+            </div>    
+        </div>
 
 
 

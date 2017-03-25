@@ -63,25 +63,16 @@
             <div class="col-md-6 col-xs-12 center">
                 <img src="images/profile.png" alt="I'm Yeoman" width="50%">
             </div>
-            
-        <table class="table ">
-       <tbody>
-         <tr ng-repeat="comedor in modelo.usuarios">
-            <td>{{comedor.nombre}}</td>
-            <td>{{comedor.manana}}</td>
-            <td>{{comedor.friends.telefonos.fijo}}</td>
-            <td>{{comedor.preferencias.alergias.gluten}}</td>
-         </tr>
-      </tbody>
-  </table>
+
             <div class="col-md-6 col-xs-12">
+            <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
                 <h2>Datos personales</h2>
                 <hr class="solid">
-                <p> Nombre: Itzel </p>
-                <p> Apellidos: Reyes Pérez </p>
-                <p> Teléfono: 54-32-45-81 </p>
-                <p> E-mail: itzelita@gmail.com </p>
-                <p> Nickname: Itzi </p>
+                <p> Nombre: {{usuario.nombre}}</p>
+                <p> Apellidos: {{usuario.apellido}}</p>
+                <p> Teléfono: {{usuario.telefonos.movil}}</p>
+                <p> E-mail: {{usuario.email}}</p>
+                <p> Nickname: {{usuario.nickname}}</p>
                 <hr class="solid">                
             </div>    
         </div>
