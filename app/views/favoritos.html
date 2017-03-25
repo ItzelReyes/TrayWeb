@@ -45,7 +45,7 @@
       
       
       <div class="container" id="tourpackages-carousel">
-      <div class="jumbotron">
+<div class="jumbotron" ng-controller="ComedorCtrl">
         <h2 class="logotipo">Favoritos!</h2>
       
         <!-- First fold -->
@@ -59,24 +59,25 @@
         <br>  
         <!-- end of First Fold -->
         
-          
+          <table>
           <!-- Contenedor de los thumbnails -->
-          <li ng-repeat="comedor in modelo.comedores">
+          
           <div class="row">
             <div class="col-xs-18 col-sm-6 col-md-3">
             <div class="thumb">
                 <div class="caption">
-                  <h4>Cafetería de Universidad {comedor.nombre}</h4>
+                   <div class="animate-repeat" ng-repeat="comedor in modelo.comedores">
+                      <h4>Cafetería de Universidad {{comedor.nombre}}</h4>
+                      <p><input type="image" id="myimage" src="{{comedor.imagen}}" href="#"><p/>
+                  </div>
                   <br>
-                  <p><input type="image" id="myimage" src="images/LaSalle.png" href="#"></p>
+                  
               </div>
             </div>
           </div>
-
-            
           </div>
           <!-- end contenedor de los thumbnails -->
-          </li>
+        
           <br>
           <br>
           <p>

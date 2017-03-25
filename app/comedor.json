@@ -11,7 +11,8 @@
     		"latitud":19.283431 , 
     		"longitud": -99.13174 , 
     		"ApiKey": "ksjdieookkkiqw78239BhW2koijd"
-    }
+    },
+    "imagen": "images/tec.jpg"
 	},
 	{"nombre": "La Salle",
     "horario": {
@@ -25,6 +26,7 @@
     		"latitud":19.283431 , 
     		"longitud": -99.13174 , 
     		"ApiKey": "ksjdieookkkiqw78239BhW2koijd"
-    }
+    },
+    "imagen": "images/LaSalle.png"
 	}
   ]}
