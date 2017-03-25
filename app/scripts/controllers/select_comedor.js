@@ -1,6 +1,6 @@
 'use strict'
 
-myApp.controller('SingUpBuscarCtrl',['$scope','$location',Function($scope,$location){
+myApp.controller('SingUpBuscarCtrl',['$scope','$location',function($scope,$location){
 
                                  
                                      
