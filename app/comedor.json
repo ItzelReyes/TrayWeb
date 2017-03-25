@@ -1,5 +1,5 @@
 {"comedores":[
-    {"nombre": "ITESM",
+    {"nombre": "UVM",
     "horario": {
     	"manana":true,"tarde": false, "noche": false
     },

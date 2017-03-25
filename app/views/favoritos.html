@@ -66,11 +66,10 @@
             <div class="col-xs-18 col-sm-6 col-md-3">
             <div class="thumb">
                 <div class="caption">
-                   <div class="animate-repeat" ng-repeat="comedor in modelo.comedores">
+                   <div class="animate-repeat" ng-repeat="comedor in modelo.comedores | orderObjectBy:'nombre':false">
                       <h4>Cafetería de Universidad {{comedor.nombre}}</h4>
                       <p><input type="image" id="myimage" src="{{comedor.imagen}}" href="#"><p/>
                   </div>
-                  <br>
                   
               </div>
             </div>
