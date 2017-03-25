@@ -1,5 +1,10 @@
-{
-    "usuario": {
+{"usuarios":[
+    {"nombre": "ITESM","manana":true,"tarde": false, "noche": false, "TelFijo": "2323232",
+        "TelOtro": "434343", "latitud":19.283431 , "longitud": -99.13174 , "ApiKey": "ksjdieookkkiqw78239BhW2koijd"}
+  ]}
+
+  {
+    "usuario": [{
         "id": 001,
         "nombre": "Itzel",
         "apellido": "Reyes",

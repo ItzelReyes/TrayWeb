@@ -1,5 +1,4 @@
-<!doctype html>
-<html lang="en">
+
 
   <head>
     <meta charset="utf-8">
@@ -13,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   </head>
 
-  <body>
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -47,8 +45,7 @@
       
       
       
-  <div class="container">
-    <div class="jumbotron">
+<div class="jumbotron" ng-controller="UsuarioCtrl">
 
         
       <div class="center">
@@ -66,6 +63,17 @@
             <div class="col-md-6 col-xs-12 center">
                 <img src="images/profile.png" alt="I'm Yeoman" width="50%">
             </div>
+            
+        <table class="table ">
+       <tbody>
+         <tr ng-repeat="comedor in modelo.usuarios">
+            <td>{{comedor.nombre}}</td>
+            <td>{{comedor.manana}}</td>
+            <td>{{comedor.TelFijo}}</td>
+            <td>{{comedor.TelOtro}}</td>
+         </tr>
+      </tbody>
+  </table>
             <div class="col-md-6 col-xs-12">
                 <h2>Datos personales</h2>
                 <hr class="solid">
@@ -93,12 +101,4 @@
       </div>
     </div>
         
- 
-            <div class="footer">
-                <div class="container">
-                    <p><span class="glyphicon glyphicon-heart"></span> from the Tray team</p>
-                </div>
-            </div>    
-  
-  </body>
-</html>
+    
