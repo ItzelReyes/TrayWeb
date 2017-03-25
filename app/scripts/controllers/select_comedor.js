@@ -1,8 +1,5 @@
 'use strict'
 
-myApp.controller('SingUpBuscarCtrl',['$scope','$location',function($scope,$location){
-
-                                 
-                                     
-                                     
+myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$location', function(NgMap){
+    NgMap.getMap();                                          
 }]);

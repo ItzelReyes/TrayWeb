@@ -1,14 +1,7 @@
 'use strict';
 
 var myApp = angular
-  .module('myApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ]);
+  .module('myApp', ['ngAnimate','ngCookies','ngResource','ngRoute','ngSanitize','ngTouch','ngMap','ngMapAutocomplete']);
 
   myApp.config(function ($routeProvider) {
     $routeProvider
