@@ -11,49 +11,50 @@
 <div class="row">
             <div class="col-md-4 col-sm-6">
             <h1 class="center">1</h1>
-            <form class="form">
+            <form class="form align-left">
               <h2>Elige tus preferencias</h2>
-              <input type="checkbox" name="preferencias" value="Res">Res<br>
-              <input type="checkbox" name="preferencias" value="Pescado">Pescado<br>
-              <input type="checkbox" name="preferencias" value="Pollo">Pollo<br>
-              <input type="checkbox" name="preferencias" value="Vegetariano">Vegetariano<br>            
+                <label>Res:
+                    <input type="checkbox" ng-model="checkboxModel.value1">
+                </label><br>
+                <label>Pescado
+                <input type="checkbox" ng-model="checkboxModel.value2">
+                </label><br>
+                <label>Pollo
+                <input type="checkbox" ng-model="checkboxModel.value3">
+                </label><br>
+                <label>Vegetariano
+                    <input type="checkbox" ng-model="checkboxModel.value4">
+                </label>
             </form>
             </div>
             
+            <!-- Selector de alérgenos -->
             <div class="col-md-4 col-sm-6">
             <h1 class="center">2</h1>
-            <div class="form-group">
                 <h2>Alérgenos</h2>  
-                  <label for="exampleSelect1">Elige una opción</label>
-                    <select class="form-control" id="tPasta">
-                        <option value="pasta 1">Glúten</option>
-                        <option value="pasta 2">Cacahuate</option>
-                        <option value="pasta 3">Lactosa</option>
-                        <option value="pasta 4">Huevos</option>
-                        <option value="pasta 3">Almidón</option>
-                        <option value="pasta 4">Soya</option>
-                    </select>
+                <div class="form-group">
+                    <label for="exampleSelect">Elige una opción</label>
+                  <select class="form-control" name="mySelect" id="mySelect" ng-options="option.name for option in alergenosDataPrefs.opciones track by option.id" ng-model="alergenosDataPrefs.selectedOption"></select>
               </div>
             </div>
+            <!-- Fin del selector de alérgenos-->
             
+            <!-- Selector de Enfermedades -->
             <div class="col-md-4 col-sm-6">
-            <h1 class="center">3</h1>
-            <h2>Enfermedades</h2>
+            <h1 class="center">3</h1> 
+                <h2>Enfermedades</h2>
                 <div class="form-group">
                   <label for="exampleSelect1">Elige una opción</label>
-                    <select class="form-control" id="tPasta">
-                        <option value="pasta 1">Colesterol</option>
-                        <option value="pasta 2">Diabetes</option>
-                        <option value="pasta 3">Hipertensión</option>
-                        <option value="pasta 4">Triglicéridos</option>
-                    </select>
+                    <select class="form-control" name="mySelect1" id="mySelect1" ng-options="option.name for option in enfermedadesDataPrefs.opciones track by option.id" ng-model="enfermedadesDataPrefs.selectedOption"></select>               
               </div>
             </div>     
-        </div>
+            <!-- Fin del selector de Enfermedades -->
+    
+    </div>
 
         <p class="center">
           <br>
-          <a class="btn btn-lg btn-success center-block" href="buscarComedor.html">Finalizar <span ></span></a>
+          <a class="btn btn-lg btn-success center-block" ng-click="getPreferences()">Next <span ></span></a>
         </p>
 
 
@@ -61,5 +62,3 @@
   </div>
     
     
-    
-</div>

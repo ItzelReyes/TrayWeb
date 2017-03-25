@@ -45,7 +45,7 @@ myApp.controller('LoginCtrl',['$scope','$location', function ($scope,$location) 
         //Se toman los valores del login y se hace algo
         $scope.getNickname();
         $scope.getPassword();
-        $location.path('/singup_preferences');
+        //$location.path('/singup_preferences');
     }
     
   }]);

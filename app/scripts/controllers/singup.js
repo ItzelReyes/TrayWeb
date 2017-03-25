@@ -1,6 +1,6 @@
 'use strict';
 
-myApp.controller('SingUpCtrl',['$scope', function($scope) {
+myApp.controller('SingUpCtrl',['$scope','$location', function($scope,$location) {
     
     var modelo = {
         register: {
@@ -25,5 +25,6 @@ myApp.controller('SingUpCtrl',['$scope', function($scope) {
     
     $scope.getRegister = function () {
         getNombre();
+        $location.path("/singup_preferences");
     }
 }]);
