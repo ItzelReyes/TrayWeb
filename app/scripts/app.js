@@ -37,8 +37,8 @@ var myApp = angular
     })
       .when('/informacion', {
         templateUrl: 'views/informacion.html',
-        controller: 'ComedorCtrl',
-        controllerAs: 'comedor'
+        controller: 'InformacionCtrl',
+        controllerAs: 'informacion'
     })
       .when('/editarPerfil', {
         templateUrl: 'views/editarPerfil.html',

@@ -10,7 +10,7 @@
 
 
 
-myApp.controller('ComedorCtrl', function ($scope,$log,$http,$location) {
+myApp.controller('ComedorCtrl', function ($scope,$log,$http,$location, SharedDataService) {
      var  modelo={
     };
 
@@ -34,5 +34,11 @@ myApp.controller('ComedorCtrl', function ($scope,$log,$http,$location) {
         //Colectar la informacion de arriba
         $location.path('/singup_buscar_comedor');
     }
+
+    $scope.enviarControlador = function(){
+        $log.debug('estoy en el enviarContolador');
+          SharedDataService.setComedores($scope.modelo.comedores[0]);
+           $location.path('/informacion');
+       }
     
   });

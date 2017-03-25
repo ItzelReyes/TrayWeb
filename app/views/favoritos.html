@@ -23,8 +23,7 @@
                 <div class="caption">
                    <div class="animate-repeat" ng-repeat="comedor in modelo.comedores | restaurantes:'nombre'">
                       <h4>Cafetería de Universidad {{comedor.nombre}}</h4>
-                    <a href="#!/informacion">  <p><input type="image" id="myimage" src="{{comedor.imagen}}"><p/>
-                  </div>
+                      <a ng-click="enviarControlador()" >  <p><input type="image" id="myimage" src="{{comedor.imagen}}"><p/>                  </div>
                   
               </div>
             </div>
