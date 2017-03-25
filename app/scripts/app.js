@@ -66,6 +66,12 @@ var myApp = angular
         controllerAs: 'home'
         
     })
+      .when('/friends', {
+        templateUrl: 'views/friends.html', //Cambiar nombre por home.html
+        controller: 'FriendsCtrl',
+        controllerAs: 'amigos'
+        
+    })
       .otherwise({
         redirectTo: '/'
       });
