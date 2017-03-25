@@ -12,7 +12,8 @@
     "angular-touch": "^1.4.0",
     "jquery": "^1.11.1",
     "ngmap": "^1.18.4",
-    "ng-map-autocomplete": "^1.0.3"
+    "ng-map-autocomplete": "^1.0.3",
+    "angular-reverse-geocode": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
@@ -27,5 +28,8 @@
         "dist/js/bootstrap.js"
       ]
     }
+  },
+  "resolutions": {
+    "angular": ">=1.2.0"
   }
 }
