@@ -11,20 +11,21 @@
 
 
 
-myApp.controller('ComedorCtrl',['$scope', function ($scope) {
-    
-   var modelo={
-      profesor : "Juan Velez",
-      alumnos : [{id: 1,nombre: "Jose", matricula: "A00032323" ,carrera: "ITC",estatus:false},
-            {id: 2, nombre: "Alejandro", matricula: "A08765223",carrera: "ITC",estatus:false}, 
-            {id: 3, nombre: "Daniela", matricula: "A01323883", carrera: "ITC",estatus: true}]
+myApp.controller('ComedorCtrl', function ($scope,$log,$http) {
+     var  modelo={
     };
-    
+
+  
+   $http({
+        method: 'GET',
+        url: '/comedor.json'
+        }).then(function successCallback(response) {
+            $log.debug("successCallback"+response.data.comedores);
+            $scope.modelo.comedores = response.data.comedores
+          }, function errorCallback(response) {
+            $log.debug("errorCallback");
+        });
     $scope.modelo = modelo;
-
+   
     
-  }]);
-
-
-
-
+  });
