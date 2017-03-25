@@ -1,0 +1,25 @@
+{
+    "alumnos": [
+    { "id": 001,
+        "nombre": "ITESM CCM",
+        "manana": true,
+        "tarde": true,
+        "noche": false, 
+        "TelFijo": "55879834",
+        "TelOtro": "5589112345",
+        "latitud": 19.283431,
+        "longitud": -99.13174,
+        "APIkey": "ksjdieookkkiqw78239BhW2koijd"
+    },
+    { "id": 002,
+        "nombre": "La Salle",
+        "manana": false,
+        "tarde": true,
+        "noche": false, 
+        "TelFijo": "55879834",
+        "TelOtro": "5589112345",
+        "latitud": 19.283431,
+        "longitud": -99.13174,
+        "APIkey": "ksjdieookkkiqw78239BhW2koij3434d"
+    }
+]}
