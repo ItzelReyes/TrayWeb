@@ -11,7 +11,7 @@
 
 
 
-myApp.controller('UsuarioCtrl', function ($scope,$log,$http) {
+myApp.controller('UsuarioCtrl', function ($scope,$log,$http,$location) {
      var  modelo={
     };
 
@@ -30,6 +30,21 @@ myApp.controller('UsuarioCtrl', function ($scope,$log,$http) {
 
     $scope.edit = function(usuario) {
       $scope.usuarioInput = usuario;
+    }
+
+    $scope.getPreferences = function() {
+        //Colectar la informacion de arriba
+        $location.path('/mostrarPreferencias');
+    }
+    
+    $scope.editProfile = function() {
+        //Colectar la informacion de arriba
+        $location.path('/editarPerfil');
+    }
+    
+    $scope.getProfile = function() {
+        //Colectar la informacion de arriba
+        $location.path('/perfil');
     }
     
   });

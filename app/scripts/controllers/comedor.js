@@ -10,7 +10,7 @@
 
 
 
-myApp.controller('ComedorCtrl', function ($scope,$log,$http) {
+myApp.controller('ComedorCtrl', function ($scope,$log,$http,$location) {
      var  modelo={
     };
 
@@ -25,5 +25,9 @@ myApp.controller('ComedorCtrl', function ($scope,$log,$http) {
         });
     $scope.modelo = modelo;
    
+    $scope.getFav = function() {
+        //Colectar la informacion de arriba
+        $location.path('/favoritos');
+    }
     
   });
