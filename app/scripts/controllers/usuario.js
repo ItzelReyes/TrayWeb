@@ -11,21 +11,25 @@
 
 
 
-myApp.controller('ComedorCtrl', function ($scope,$log,$http) {
+myApp.controller('UsuarioCtrl', function ($scope,$log,$http) {
      var  modelo={
     };
 
   
    $http({
         method: 'GET',
-        url: '/comedor.json'
+        url: '/usuario.json'
         }).then(function successCallback(response) {
-            $log.debug("successCallback"+response.data.comedores);
-            $scope.modelo.comedores = response.data.comedores
+            $log.debug("successCallback"+response.data.usuarios);
+            $scope.modelo.usuarios = response.data.usuarios
           }, function errorCallback(response) {
             $log.debug("errorCallback");
         });
     $scope.modelo = modelo;
    
+
+    $scope.edit = function(usuario) {
+      $scope.usuarioInput = usuario;
+    }
     
   });

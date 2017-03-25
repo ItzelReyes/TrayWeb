@@ -1,35 +1,25 @@
-{
-    "usuario": {
-        "id": 001,
-        "nombre": "Itzel",
-        "apellido": "Reyes",
-        "telefonos": {
-                    "fijo": "55879834",
-                    "movil": "5589112345"
-         },
-        "email": "itzel@myemail.com",
-        "nickname": "itzelitareyes",
+{"usuarios":[
+    {"nombre": "ITESM","apellido": "Reyes","telefonos":
+        { "fijo": "telefonofijo", 
+        "movil": 23
+        }, 
+        "email": "itzel@myemail.com", "nickname": "itzelitareyes",
         "password": "d0be2dc421be4fcd0172e5afceea3970e2f3d940",
-        "friends": [
-                {
-                    "id": 202,
+        "friends":{
                     "nombre": "Daniela",
                     "nickname": "danimartin",
                     "telefonos":{
                         "fijo": "55234789",
                         "movil": "5589097699"
                     }
-                }
-        ],
-         "preferencias":[
-         {
+        },
+        "preferencias":{
             "comida": {
                 "res": true,
                 "pescado": false,
                 "pollo": true,
                 "vegetariano": false
-            },        
-
+            },
             "alergias": 
                 {
                     "gluten": true,
@@ -46,6 +36,6 @@
                     "trigliceridos": true
             }
         }
-        ] 
     }
-}
+
+  ]}

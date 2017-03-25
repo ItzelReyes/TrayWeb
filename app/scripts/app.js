@@ -35,10 +35,20 @@ var myApp = angular
         controller: 'SingUpBuscarCtrl',
         controllerAs: 'singup_buscar'
     })
-      .when('/prueba2', {
-        templateUrl: 'views/prueba2.html',
+      .when('/informacion', {
+        templateUrl: 'views/informacion.html',
         controller: 'ComedorCtrl',
         controllerAs: 'comedor'
+    })
+      .when('/editarPerfil', {
+        templateUrl: 'views/editarPerfil.html',
+        controller: 'UsuarioCtrl',
+        controllerAs: 'usuario'
+    })
+      .when('/perfil', {
+        templateUrl: 'views/perfil.html',
+        controller: 'UsuarioCtrl',
+        controllerAs: 'usuario'
     })
       .when('/home', {
         templateUrl: 'views/favoritos.html', //Cambiar nombre por home.html

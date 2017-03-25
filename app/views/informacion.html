@@ -1,0 +1,87 @@
+
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="favoritos.html"><img src="images/meal.png" alt="I'm Yeoman" width="30"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="favoritos.html">Inicio</a></li>
+              <li><a href="perfil.html">Mi perfil</a></li>
+              <li><a href="buscarComedor.html">Buscar establecimientos</a></li>              
+              <li><a href="favoritos.html">Favoritos</a></li>
+              <li><a href="preferenciasReporte.html">Food facts</a></li>
+              <li><a href="friends.html">Amigos</a></li>
+              <li><a href="reportes.html">Reportes</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/">Cerrar Sesion</a></li>
+            </ul>  
+          </div>
+        </div>
+      </div>
+    </div>      
+        
+  <div class="container">
+    <div class="jumbotron">
+      
+        
+       <div class="center">
+                <h1>Información</h1>
+
+              <p class="lead">
+                <img src="images/meal.png" alt="I'm Yeoman"><br>
+              </p>
+              <hr class="style2">
+              <br>
+              <br>
+        </div>        
+        
+        
+        
+        
+    <div class="row">
+        <div class="col-md-6 col-sm-12 center">
+          <p class="lead">
+            <img src="images/tec.jpg"  style='width:60%;'><br>
+          </p>
+      
+        <table class="table ">
+       <tbody>
+         <tr ng-repeat="comedor in modelo.comedores">
+            <td>{{comedor.nombre}}</td>
+            <td>{{comedor.manana}}</td>
+            <td>{{comedor.TelFijo}}</td>
+            <td>{{comedor.TelOtro}}</td>
+         </tr>
+      </tbody>
+  </table>
+
+        </div>    
+        <div class="col-md-6 col-sm-12">
+           <p class="lead">
+            <img src="images/mapatec.png" width="80%"><br>
+            </p>
+        </div>
+    </div>    
+                
+
+    <div class="row center">
+      <p>
+        <a class="btn btn-lg btn-success" href="detalleFav.html">Regresar<span ></span></a>
+      </p>        
+    </div>        
+   
+
+  </div>
+  </div>
+      
+      
+        
