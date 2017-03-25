@@ -42,8 +42,8 @@ var myApp = angular
         controller: 'SingUpBuscarCtrl',
         controllerAs: 'singup_buscar'
     })
-      .when('/prueba2', {
-        templateUrl: 'views/prueba2.html',
+      .when('/informacion', {
+        templateUrl: 'views/informacion.html',
         controller: 'ComedorCtrl',
         controllerAs: 'comedor'
     })
