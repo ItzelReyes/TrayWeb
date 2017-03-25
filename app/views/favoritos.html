@@ -1,5 +1,3 @@
-<!doctype html>
-<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -14,7 +12,6 @@
       
   </head>
 
-  <body>
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -64,41 +61,22 @@
         
           
           <!-- Contenedor de los thumbnails -->
+          <li ng-repeat="comedor in modelo.comedores">
           <div class="row">
             <div class="col-xs-18 col-sm-6 col-md-3">
             <div class="thumb">
                 <div class="caption">
-                  <h4>Cafetería de Universidad La Salle</h4>
+                  <h4>Cafetería de Universidad {comedor.nombre}</h4>
                   <br>
                   <p><input type="image" id="myimage" src="images/LaSalle.png" href="#"></p>
               </div>
             </div>
           </div>
 
-            <div class="col-xs-18 col-sm-6 col-md-3">
-            <div class="thumb">
-                <div class="caption">
-                  <br>
-                  <a href="detalleFav.html">
-                 <h4>Cafetería del Tecnológico de Monterrey</h4>
-                 <input type="image" id="myimage" src="images/tec.jpg" href="detalleFav.html"></p>
-              </div>
-            </div>
-          </div>
-
-            <div class="col-xs-18 col-sm-6 col-md-3">
-            <div class="thumb">
-                <div class="caption">
-                  <h4>Quality Corporativo</h4>
-                  <br><br><br><br>
-                  <p><input type="image" id="myimage" src="images/corporativo.png" href="#"></p>
-                  <br><br>
-              </div>
-            </div>
-          </div>
+            
           </div>
           <!-- end contenedor de los thumbnails -->
-          
+          </li>
           <br>
           <br>
           <p>
@@ -109,11 +87,4 @@
       </div>    
     </div><!-- End container -->
     
-      <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Tray team</p>
-      </div>
-    
-    </div>
-  </body>
-</html>
+      

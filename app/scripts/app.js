@@ -50,6 +50,11 @@ var myApp = angular
         controller: 'UsuarioCtrl',
         controllerAs: 'usuario'
     })
+      .when('/favoritos', {
+        templateUrl: 'views/favoritos.html',
+        controller: 'ComedorCtrl',
+        controllerAs: 'comedor'
+    })
       .when('/home', {
         templateUrl: 'views/favoritos.html', //Cambiar nombre por home.html
         controller: 'homeCtrl',
