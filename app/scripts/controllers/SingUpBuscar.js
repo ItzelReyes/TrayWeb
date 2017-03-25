@@ -10,7 +10,7 @@
 
 
 
-myApp.controller('SignUpBuscarCtrl', function ($scope,$log,$http,$location) {
+myApp.controller('SingUpBuscarCtrl', function ($scope,$log,$http,$location) {
      var  modelo={
     };
 
@@ -25,7 +25,7 @@ myApp.controller('SignUpBuscarCtrl', function ($scope,$log,$http,$location) {
         });
     $scope.modelo = modelo;
    
-    $scope.getFav = function() {
+    $scope.getFav2 = function() {
         //Colectar la informacion de arriba
         $location.path('/favoritos');
     }

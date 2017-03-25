@@ -12,33 +12,27 @@
   <div class="row">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
-                    <input type="text" ng-map-autocomplete ng-model="nombre" class="form-control input-lg" placeholder="Buscar" />
+                    <input type="text" ng-map-autocomplete ng-model="autocomplete" class="form-control input-lg" placeholder="Buscar" />
                     <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" ng-click= "searchComedor()" type="button">
+                        <button class="btn btn-info btn-lg" type="button">
                             <i class="glyphicon glyphicon-search"></i>
                         </button>
                     </span>
                 </div>
             </div>
-        </div>
+  </div>
       <br>
       <br>
       <br>
-      <ng-map id="mapa" zoom="18" center="current-position" ng-hide="isEmpty()">
-        <!-- <map-data load-geo-json="events.json"></map-data> -->
+      <ng-map  zoom="18" center="current-position">
+        <map-data load-geo-json="events.json"></map-data>
       </ng-map>
         <br>
-        <div class="col-md-12" ng-repeat="valor in modelo.lugar track by $index">
-            <a class="list-group-item">
-                <h2>{{valor.nombre}}</h2>
-                <h3>{{valor.direccion}}</h3>
-            </a>
         <br>
-        </div>
-
+      
         <div class="row center">
             <p>
-            <a class="btn btn-lg btn-success" ng-click="getFav()">Finalizar<span ></span></a>
+            <a class="btn btn-lg btn-success" ng-click="getFav2()">Finalizar<span ></span></a>
           </p>            
         </div>
     </div>

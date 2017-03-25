@@ -17,14 +17,48 @@
     <link rel="stylesheet" type="text/css" href="app/styles/mycss.css">
     <link rel="stylesheet" type="text/css" href="app/styles/logincss.css">
     <link rel="stylesheet" type="text/css" href="styles/formularios.css">
+    <link rel="stylesheet" type="text/css" href="styles/favoritoscss.css">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   </head>
+
+
   <body ng-app="myApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="favoritos.html"><img src="images/meal.png" alt="I'm Yeoman" width="30"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="favoritos.html">Inicio</a></li>
+              <li><a href="perfil.html">Mi perfil</a></li>
+              <li><a href="buscarComedor.html">Buscar establecimientos</a></li>              
+              <li><a href="favoritos.html">Favoritos</a></li>
+              <li><a href="preferenciasReporte.html">Food facts</a></li>
+              <li><a href="friends.html">Amigos</a></li>
+              <li><a href="reportes.html">Reportes</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/">Cerrar Sesion</a></li>
+            </ul>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+
       
     <div class="container">
     <div ng-view=""></div>
@@ -75,11 +109,10 @@
         <script src="scripts/controllers/singup_preferences.js"></script>
         <script src="scripts/controllers/select_comedor.js"></script>
         <script src="scripts/controllers/comedor.js"></script>
-<<<<<<< Updated upstream
-=======
+
         <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyCpFNsHWLLxzIhZFoD4oXCqQFLDWowEEGc"></script> -->
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyCpFNsHWLLxzIhZFoD4oXCqQFLDWowEEGc"></script>
->>>>>>> Stashed changes
+
         <script src="scripts/controllers/usuario.js"></script>
 
         <script src="scripts/filters/restaurantes.js"></script>
@@ -87,6 +120,10 @@
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyCpFNsHWLLxzIhZFoD4oXCqQFLDWowEEGc"></script>
         
         <script src="scripts/services/shareddataservice.js"></script>
+
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>

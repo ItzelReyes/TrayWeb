@@ -30,4 +30,9 @@ myApp.controller('ComedorCtrl', function ($scope,$log,$http,$location) {
         $location.path('/favoritos');
     }
     
+    $scope.getBuscarComedor = function() {
+        //Colectar la informacion de arriba
+        $location.path('/singup_buscar_comedor');
+    }
+    
   });

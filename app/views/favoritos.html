@@ -1,49 +1,4 @@
 
-  <head>
-    <meta charset="utf-8">
-    <title>Favoritos</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="styles/mycss.css">
-    <link rel="stylesheet" type="text/css" href="styles/favoritoscss.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-      
-  </head>
-
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          <a class="navbar-brand" href="favoritos.html"><img src="images/meal.png" alt="I'm Yeoman" width="30"></a>
-          </div>
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="favoritos.html">Inicio</a></li>
-              <li><a href="perfil.html">Mi perfil</a></li>
-              <li><a href="buscarComedor.html">Buscar establecimientos</a></li>              
-              <li><a href="favoritos.html">Favoritos</a></li>
-              <li><a href="preferenciasReporte.html">Food facts</a></li>
-              <li><a href="friends.html">Amigos</a></li>
-              <li><a href="reportes.html">Reportes</a></li>
-            </ul>
-            <ul class="nav navbar-nav pull-right">
-                <li><a href="/">Cerrar Sesion</a></li>
-            </ul>  
-          </div>
-        </div>
-      </div>
-    </div>      
-  
-      
-      
       <div class="container" id="tourpackages-carousel">
 <div class="jumbotron" ng-controller="ComedorCtrl">
         <h2 class="logotipo">Favoritos!</h2>
@@ -81,7 +36,7 @@
           <br>
           <p>
             <div class="form-group">
-                            <p><a class="btn btn-lg btn-success" href="buscarComedor.html">Agregar<span ></span></a></p>
+                            <p><a class="btn btn-lg btn-success" ng-click="getBuscarComedor()">Agregar<span ></span></a></p>
                         </div>     
           </p>
       </div>    
