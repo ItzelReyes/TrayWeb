@@ -72,6 +72,43 @@ var myApp = angular
         controllerAs: 'amigos'
         
     })
+
+
+      .when('/404', {
+        templateUrl: 'views/404.html',
+        controller: '404Ctrl',
+        controllerAs: 'error404'
+      })
+      .when('/detalleFav', {
+        templateUrl: 'views/detalleFav.html',
+        controller: 'DetalleFavCtrl',
+        controllerAs: 'detFav'
+    })
+      .when('/editarPreferencias', {
+        templateUrl: 'views/editarPreferencias.html',
+        controller: 'EditarPreferenciasCtrl',
+        controllerAs: 'editPref'
+    })
+      .when('/preferencias', {
+        templateUrl: 'views/preferencias.html',
+        controller: 'PreferenciasCtrl',
+        controllerAs: 'preferencias'
+    })
+      .when('/preferenciasReporte', {
+        templateUrl: 'views/preferenciasReporte.html',
+        controller: 'PrefReporteCtrl',
+        controllerAs: 'prefReporte'
+    })
+      .when('/reportes', {
+        templateUrl: 'views/reportes.html',
+        controller: 'ReportesCtrl',
+        controllerAs: 'reportes'
+    })
+      .when('/reservacion', {
+        templateUrl: 'views/reservacion.html',
+        controller: 'ReservacionCtrl',
+        controllerAs: 'reservacion'
+    })
       .otherwise({
         redirectTo: '/'
       });
