@@ -35,9 +35,9 @@ myApp.controller('ComedorCtrl', function ($scope,$log,$http,$location, SharedDat
         $location.path('/singup_buscar_comedor');
     }
 
-    $scope.enviarControlador = function(){
+    $scope.enviarControlador = function(item){
         $log.debug('estoy en el enviarContolador');
-          SharedDataService.setComedores($scope.modelo.comedores[0]);
+          SharedDataService.setComedores($scope.modelo.comedores[item]);
            $location.path('/informacion');
        }
     
