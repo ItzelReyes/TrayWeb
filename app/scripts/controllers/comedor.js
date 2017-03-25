@@ -10,12 +10,10 @@
 
 
 
-
 myApp.controller('ComedorCtrl', function ($scope,$log,$http) {
      var  modelo={
     };
 
-  
    $http({
         method: 'GET',
         url: '/comedor.json'
