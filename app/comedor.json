@@ -1,4 +1,16 @@
 {"comedores":[
-    {"nombre": "ITESM","manana":true,"tarde": false, "noche": false, "TelFijo": "2323232",
-        "TelOtro": "434343", "latitud":19.283431 , "longitud": -99.13174 , "ApiKey": "ksjdieookkkiqw78239BhW2koijd"}
+    {"nombre": "ITESM",
+    "horario": {
+    	"manana":true,"tarde": false, "noche": false
+    },
+    "telefonos": {
+	    	"TelFijo": "2323232",
+	        "TelOtro": "434343"
+    }, 
+    "ubicacion": {
+    		"latitud":19.283431 , 
+    		"longitud": -99.13174 , 
+    		"ApiKey": "ksjdieookkkiqw78239BhW2koijd"
+    }
+}
   ]}
