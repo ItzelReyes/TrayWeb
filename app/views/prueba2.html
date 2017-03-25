@@ -1,0 +1,22 @@
+
+<div class="jumbotron" ng-controller="ComedorCtrl">
+<div class="panel">
+  <table class="table ">
+    <thead>
+      <tr>
+      <th>ID </th>
+        <th>Nombre</th>
+        <th>Matricula</th>
+         <th>Carrera</th>
+        <th>Estatus</th>
+         <th>Commandos</th>
+      </tr>
+      </thead>
+      <tbody>
+         <tr ng-repeat="shalala in modelo.alumnos">
+            <td>{{shalala.nombre}}</td>
+         </tr>
+      </tbody>
+  </table>
+  <br/>
+</div>

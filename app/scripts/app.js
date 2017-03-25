@@ -42,6 +42,11 @@ var myApp = angular
         controller: 'SingUpBuscarCtrl',
         controllerAs: 'singup_buscar'
     })
+      .when('/prueba2', {
+        templateUrl: 'views/prueba2.html',
+        controller: 'ComedorCtrl',
+        controllerAs: 'comedor'
+    })
       .when('/home', {
         templateUrl: 'views/favoritos.html', //Cambiar nombre por home.html
         controller: 'homeCtrl',
