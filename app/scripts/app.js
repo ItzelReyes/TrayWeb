@@ -47,6 +47,11 @@ var myApp = angular
         controller: 'ComedorCtrl',
         controllerAs: 'comedor'
     })
+      .when('/editarPerfil', {
+        templateUrl: 'views/editarPerfil.html',
+        controller: 'UsuarioCtrl',
+        controllerAs: 'usuario'
+    })
       .when('/perfil', {
         templateUrl: 'views/perfil.html',
         controller: 'UsuarioCtrl',

@@ -27,5 +27,9 @@ myApp.controller('UsuarioCtrl', function ($scope,$log,$http) {
         });
     $scope.modelo = modelo;
    
+
+    $scope.edit = function(usuario) {
+      $scope.usuarioInput = usuario;
+    }
     
   });
