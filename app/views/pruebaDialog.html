@@ -1,0 +1,65 @@
+<div ng-controller="DialogCtrl">
+<div class="page-header">
+  <div class="form-group has-feedback">
+<!--     <label>Buscar por Título</label>
+    <input class="form-control" ng-model="search"/>
+    <br>
+    <button class="btn btn-primary" ng-click="find($event,search)">Buscar</button>
+    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    <h4><span ng-class="label-danger">{{notFound}}</span></h4> -->
+  </div>
+  <h1>Lista Libros</h1>
+</div>
+<div class="panel">
+  <div class="input-group">
+    <div class="form-group">
+      <label>Nombre:</label>
+      <input class="form-control" ng-model="nombreT"/>
+    </div>
+    <div class="form-group">
+      <label>Apellidos:</label>
+      <input class="form-control" ng-model="apellidosT"/>
+    </div>
+    <div class="form-group">
+      <label>Teléfono:</label>
+      <input class="form-control" ng-model="telefonoT"/>
+    </div>
+    <div class="form-group">
+      <label>Email:</label>
+      <input class="form-control" ng-model="emailT"/>
+    </div>
+    <div class="form-group">
+      <label>Nickname:</label>
+      <input class="form-control" ng-model="nicknameT"/>
+    </div>
+    <div class="form-group">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" ng-click="addBook(nombreT, apellidosT, telefonoT, emailT, nicknameT)">Añadir</button>
+      </span>
+    </div>
+  </div>
+  <table class="table table-stripped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+        <th>Nickname</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="l in modelo.libro">
+        <td>{{l.nombre}}</td>
+        <td>{{l.apellidos}}</td>
+        <td>{{l.telefono}}</td>
+        <td>{{l.email}}</td>
+        <td>{{l.nickname}}</td>
+        <td>
+        <span class="input-group-btn"> <button class="btn btn-primary" ng-click="showDialog($event,l)">Modificar</button></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

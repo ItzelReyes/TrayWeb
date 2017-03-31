@@ -11,7 +11,7 @@
 
 
 
-myApp.controller('UsuarioCtrl', function ($scope,$log,$http,$location) {
+myApp.controller('UsuarioCtrl', function ($scope,$log,$http,$location,$mdDialog) {
      var  modelo={
     };
 
@@ -46,5 +46,27 @@ myApp.controller('UsuarioCtrl', function ($scope,$log,$http,$location) {
         //Colectar la informacion de arriba
         $location.path('/perfil');
     }
+
+    $scope.hideDialog = function() {
+      $mdDialog.hide({
+        });
+
+    }
+    
+    $scope.showDialog = function(ev,usuario) {        
+    $mdDialog.show({
+        controller: function Ctrl($scope, $mdDialog, usuario) {
+            $scope.data = usuario;
+        },
+        controllerAs: 'ctrl',
+        targetEvent: ev,
+        templateUrl: "views/dialog.html",
+        locals: {
+            usuario : usuario
+        }
+    });    
+        
+    };
+
     
   });

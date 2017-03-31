@@ -1,0 +1,47 @@
+<head>
+    <link rel="stylesheet" href="styles/dialog.css">
+</head>
+
+<div ng-controller="DialogCtrl">
+<md-dialog class="fullscreen-dialog" aria-label="Full Screen Dialog Test">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" ng-click="closeDialog()">
+            <md-icon class="fa fa-times fa-2x"></md-icon>
+          </md-button>
+          <h2 flex="flex">Ver</h2>
+        </div>
+      </md-toolbar>
+      <md-dialog-content>
+        <div layout="layout" layout-lg>
+          <md-input-container style="width:80%">
+            <label>Nombre:</label>
+            <br>
+            <td>{{usuario.nombre}}<td/>
+          </md-input-container>
+        <md-input-container style="width:80%">
+            <label>Apellidos:</label>
+            <br>
+            <td>{{usuario.apellido}}<td/>
+        </md-input-container>
+        <md-input-container style="width:80%">
+            <label>Teléfono:</label>
+            <br>
+            <td>{{usuario.telefonos.movil}}<td/>
+          </md-input-container>
+          <md-input-container style="width:80%">
+            <label>Email:</label>
+            <br>
+            <td>{{usuario.email}}<td/>
+          </md-input-container>    
+          <md-input-container style="width:80%">
+            <label>Nickname:</label>
+            <br>
+            <td>{{usuario.nickname}}<td/>
+          </md-input-container> 
+          </div>
+          <span class="input-group-btn"> <button class="btn btn-primary" ng-click="hideDialog()">Cerrar</button></span>
+          <br>
+      </md-dialog-content>
+</md-dialog>
+</div>

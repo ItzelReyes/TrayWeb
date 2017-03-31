@@ -1,7 +1,7 @@
 'use strict';
 
 var myApp = angular
-  .module('myApp', ['ngAnimate','ngCookies','ngResource','ngRoute','ngSanitize','ngTouch','ngMap','ngMapAutocomplete','angularReverseGeocode']);
+  .module('myApp', ['ngAnimate','ngCookies','ngResource','ngRoute','ngSanitize','ngTouch','ngMap','ngMapAutocomplete','angularReverseGeocode','ngMaterial']);
 
   myApp.config(function ($routeProvider) {
     $routeProvider
@@ -70,7 +70,6 @@ var myApp = angular
         templateUrl: 'views/friends.html', //Cambiar nombre por home.html
         controller: 'FriendsCtrl',
         controllerAs: 'amigos'
-        
     })
       .when('/404', {
         templateUrl: 'views/404.html',
@@ -106,6 +105,11 @@ var myApp = angular
         templateUrl: 'views/reservacion.html',
         controller: 'ReservacionCtrl',
         controllerAs: 'reservacion'
+    })
+      .when('/pruebaDialog', {
+        templateUrl: 'views/pruebaDialog.html',
+        controller: 'DialogCtrl',
+        controllerAs: 'dialog'
     })
       .otherwise({
         redirectTo: '/'

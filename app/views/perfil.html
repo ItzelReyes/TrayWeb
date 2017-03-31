@@ -1,49 +1,50 @@
      
-<div class="jumbotron" ng-controller="UsuarioCtrl">
+<div class="jumbotron" ng-controller="UsuarioCtrl">  
+  <div class="center">
+    <h2 class="logotipo">Mi perfil</h2>
+      <p class="lead">
+        <img src="images/meal.png" alt="I'm Yeoman"><br>
+      </p>
+      <br>
+      <br>
+      <hr class="style2">
+  </div>       
+  <br>
+  
+    <div class="row">
+    <br>
 
-        
-      <div class="center">
-        <h2 class="logotipo">Mi perfil</h2>
-          <p class="lead">
-            <img src="images/meal.png" alt="I'm Yeoman"><br>
-          </p>
-          <br>
-          <br>
-          <hr class="style2">
-        </div>       
-        <br>
-        <div class="row">
-          <br>
-            <div class="col-md-6 col-xs-12 center">
-                <img src="images/profile.png" alt="I'm Yeoman" width="50%">
-            </div>
-
-            <div class="col-md-6 col-xs-12">
-            <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
-                <h2>Datos personales</h2>
-                <hr class="solid">
-                <p> Nombre: {{usuario.nombre}}</p>
-                <p> Apellidos: {{usuario.apellido}}</p>
-                <p> Teléfono: {{usuario.telefonos.movil}}</p>
-                <p> E-mail: {{usuario.email}}</p>
-                <p> Nickname: {{usuario.nickname}}</p>
-                <hr class="solid">                
-            </div>    
-        </div>
-        
-        <div class="row">
-            <div class="col-md-6 col-xs-6">
-              <p>
-                <a class="btn btn-lg btn-success" ng-click="getPreferences()">Mis preferencias<span ></span></a>
-              </p>            
-            </div>
-            <div class="col-md-6 col-xs-6 center">
-              <p>
-                <a class="btn btn-lg btn-success" ng-click="editProfile()">Editar<span ></span></a>
-              </p>            
-            </div>    
-        </div>
+      <div class="col-md-6 col-xs-12 center">
+        <img src="images/profile.png" alt="I'm Yeoman" width="50%">
       </div>
+
+        <div class="col-md-6 col-xs-12">
+          <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
+            <h2>Datos personales</h2>
+            <hr class="solid">
+            <p> Nombre: {{usuario.nombre}}</p>
+            <p> Apellidos: {{usuario.apellido}}</p>
+            <p> Teléfono: {{usuario.telefonos.movil}}</p>
+            <p> E-mail: {{usuario.email}}</p>
+            <p> Nickname: {{usuario.nickname}}</p>
+            <hr class="solid">                
+          </div>    
+        </div>
+        
+        <div class="row">
+          <div class="col-md-6 col-xs-6">
+            <p>
+              <a class="btn btn-lg btn-success" ng-click="getPreferences()">Mis preferencias<span ></span></a>
+            </p>            
+          </div>
+
+          <div class="col-md-6 col-xs-6 center">
+            <p>
+              <a class="btn btn-lg btn-success" ng-click="showDialog($event,usuario)">Editar<span ></span></a>
+            </p>
+          </div>    
+        </div>
     </div>
+</div>
         
     

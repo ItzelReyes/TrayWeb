@@ -1,19 +1,62 @@
 {"usuarios":[
-    {"nombre": "Itzel","apellido": "Reyes",
-        "telefonos":
-        { "fijo": "53213478", 
-        "movil": "5578925643"
+    {   "nombre": "Itzel",
+
+        "apellido": "Reyes",
+        
+        "telefonos":{ 
+            "fijo": "53213478", 
+            "movil": "5578925643"
         }, 
-        "email": "itzel@myemail.com", "nickname": "itzelitareyes",
+
+        "email": "itzel@myemail.com", 
+
+        "nickname": "itzelitareyes",
+        
         "password": "d0be2dc421be4fcd0172e5afceea3970e2f3d940",
+        
         "friends":{
+            "friend1":{
                     "nombre": "Daniela",
                     "nickname": "danimartin",
                     "telefonos":{
                         "fijo": "55234789",
                         "movil": "5589097699"
                     }
+            }, 
+            "friend2":{
+                    "nombre": "Itzel",
+                    "nickname": "itzireyes",
+                    "telefonos":{
+                        "fijo": "55234789",
+                        "movil": "5589097699"
+                    }
+            },     
+            "friend3":{
+                    "nombre": "Alex",
+                    "nickname": "alexshark",
+                    "telefonos":{
+                        "fijo": "55234789",
+                        "movil": "5589097699"
+                    }
+            },
+            "friend4":{
+                    "nombre": "Yukio",
+                    "nickname": "superyukio",
+                    "telefonos":{
+                        "fijo": "55234789",
+                        "movil": "5589097699"
+                    }
+            },
+            "friend5":{
+                    "nombre": "José",
+                    "nickname": "josesito",
+                    "telefonos":{
+                        "fijo": "55234789",
+                        "movil": "5589097699"
+                    }
+            }
         },
+
         "preferencias":{
             "comida": {
                 "res": true,
@@ -21,20 +64,21 @@
                 "pollo": true,
                 "vegetariano": false
             },
-            "alergias": 
-                {
-                    "gluten": true,
-                    "cacahuate": false,
-                    "lactosa": false,
-                    "huevos": false,
-                    "almidon": false,
-                    "soya": false
-                },
+
+            "alergias": {
+                "gluten": true,
+                "cacahuate": false,
+                "lactosa": false,
+                "huevos": false,
+                "almidon": false,
+                "soya": false
+            },
+
             "enfermedades": {
-                    "colesterol": false,
-                    "diabetes": false,
-                    "hipertension": false,
-                    "trigliceridos": true
+                "colesterol": false,
+                "diabetes": false,
+                "hipertension": false,
+                "trigliceridos": true
             }
         }
     }

@@ -32,6 +32,9 @@ module.exports = function(config) {
       'bower_components/ngmap/build/scripts/ng-map.js',
       'bower_components/ng-map-autocomplete/src/ng-map-autocomplete.js',
       'bower_components/angular-reverse-geocode/angular-reverse-geocode.js',
+      'bower_components/angular-aria/angular-aria.js',
+      'bower_components/angular-messages/angular-messages.js',
+      'bower_components/angular-material/angular-material.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
