@@ -10,7 +10,7 @@
 
 
 
-myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedDataService) {
+myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedDataService,$mdDialog) {
      var  modelo={
     };
 
@@ -36,4 +36,47 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
     }
 */
 
+    $scope.hideDialog = function() {
+//      $scope.notFound = "Si esdsdsdsdssncontrado";
+      $mdDialog.hide({
+        });
+
+    }
+
+    $scope.showDialog = function(ev,usuario) {        
+    $mdDialog.show({
+        controller: function Ctrl($scope, $mdDialog, usuario) {
+            $scope.data = usuario;
+        },
+        controllerAs: 'ctrl',
+        targetEvent: ev,
+        templateUrl: "views/dialog.html",
+        locals: {
+            usuario : usuario
+        }
+    });    
+        
+    };
+
+    $scope.find = function(ev,dataSearch){
+
+      angular.forEach($scope.modelo.usuarios, function(item){
+      if(item.friends.friend1.nombre == dataSearch) { 
+        $mdDialog.show({
+        controller: function Ctrl($scope, $mdDialog, item) {
+            $scope.data = item;
+        },
+        controllerAs: 'ctrl',
+        targetEvent: ev,
+        templateUrl: "views/show.html",
+        locals: {
+            item : item
+        }
+    }); 
+        $scope.notFound = "";
+      }else{
+         return $scope.notFound = "No encontrado";
+      }
+      })
+    }
   });
