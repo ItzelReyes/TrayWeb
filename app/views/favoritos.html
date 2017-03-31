@@ -1,45 +1,44 @@
 
-      <div class="container" id="tourpackages-carousel">
-<div class="jumbotron" ng-controller="ComedorCtrl">
-        <h2 class="logotipo">Favoritos!</h2>
-      
+<div class="container" id="tourpackages-carousel">
+  <div class="jumbotron" ng-controller="ComedorCtrl">
+    <h2 class="logotipo">Favoritos!</h2>
         <!-- First fold -->
-        <p class="lead">
-          <img src="images/meal.png"alt="I'm Yeoman" height="120" width="120"><br>
-        </p>
-        <br>
-        <br>
-        <hr class="style2">
-        <br>
-        <br>  
+    <p class="lead">
+      <img src="images/meal.png"alt="I'm Yeoman" height="120" width="120"><br>
+    </p>
+    <br>
+    <br>
+    <hr class="style2">
+    <br>
+    <br>  
         <!-- end of First Fold -->
-        
-          <table>
+      <table class="TixManagementContent" id="TixManagementContent" width="990px">
+        <tbody>
+          <div class="carousel-inner" id="wrapper">
           <!-- Contenedor de los thumbnails -->
-          
-          <div class="row">
-            <div class="col-xs-18 col-sm-6 col-md-3">
-            <div class="thumb">
-                <div class="caption">
-                   <div class="animate-repeat" ng-repeat="comedor in modelo.comedores | restaurantes:'nombre'">
-                      <h4>Cafetería de Universidad {{comedor.nombre}}</h4>
-                      <a ng-click="enviarControlador($index)" >  <p><input type="image" id="myimage" src="{{comedor.imagen}}"><p/>    
-                </div>
-                  
-              </div>
+            <div class="animate-repeat" ng-repeat="comedor in modelo.comedores | restaurantes:'nombre'">
+
+            <div class="col-md-4">
+            <a class="thumbnail">
+                  <h4>Cafetería de Universidad {{comedor.nombre}}</h4>
+                  <p ng-click="enviarControlador($index)">  
+                  <p>
+                    <input type="image" id="myimage" src="{{comedor.imagen}}">
+                  <p/>    
+                </a>
             </div>
-          </div>
-          </div>
           <!-- end contenedor de los thumbnails -->
-        
-          <br>
+          </tbody>
+          
+        <br>
           <br>
           <p>
             <div class="form-group">
-                            <p><a class="btn btn-lg btn-success" ng-click="getBuscarComedor()">Agregar<span ></span></a></p>
-                        </div>     
+              <p><a class="btn btn-lg btn-success" ng-click="getBuscarComedor()">Agregar<span ></span></a></p>
+            </div>     
           </p>
-      </div>    
+      </div>  
+    </div>
     </div><!-- End container -->
     
       
