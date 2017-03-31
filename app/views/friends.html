@@ -1,6 +1,6 @@
 
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron" ng-controller="FriendsCtrl">
     
     
             <div class="center">
@@ -17,72 +17,57 @@
       <table class="TixManagementContent" id="TixManagementContent" width="990px">
            <tbody>
              <div class="carousel-inner" id="wrapper">
-                <div class="item active">
+                <div class="item active" class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
+                  
                   <div class="col-md-4">
                     <a href="#" class="thumbnail">
-                       <img src="images/dani.jpg" alt="ALT NAME" width=80% >
-                        <div class="caption">
-                        <h3>Daniela M</h3>
+                       <img src="{{usuario.friends.friend1.foto}}" alt="ALT NAME" width=80% >
+                        <h3>{{usuario.friends.friend1.nombre}}</h3>
                           <p>
                             <button  href="5567893456" class="btn btn-primary" target="_top">Llamar</button>
                           </p>
-                        </div>
                     </a>
-                  </div>                              
-      <div class="col-md-4">
-        <a href="#" class="thumbnail">
-            <img src="images/itzel.jpg" alt="ALT NAME">
-            <div class="caption">
-              <h3>Itz Pérez</h3>
-            <p>
-              <button  href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Llamar</button>
-            </p>
-          </div>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="#" class="thumbnail">
-            <img src="images/alex.jpg" alt="ALT NAME">
-            <div class="caption">
-              <h3>Alex C</h3>
-            <p>
-              <button  href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Llamar</button>
-            </p>
-          </div>
-        </a>
-     </div>
+                  </div>  
 
-     <div class="col-md-4">
-        <a href="#" class="thumbnail">
-            <img src="images/yukio.jpg" alt="ALT NAME">
-            <div class="caption">
-              <h3>Yuks</h3>
-            <p>
-              <button href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Agregar</button>
-            </p>
-          </div>
-        </a>
-     </div>
-  </div> 
-    <div class="col-md-4">
-      <a href="#" class="thumbnail">
-          <img src="images/jose.jpg" alt="ALT NAME">
-          <div class="caption">
-            <h3>Jose</h3>
-          <p>
-        <button href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Agregar</button>
-          </p>
-        </div>
-      </a>
-    </div>    
-  </div> 
-  </div>
-  </div>
-  </td>
-  </tr>
-  </table>
-  </tbody>
-  </div>
-  </div>
+                  <div class="col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="{{usuario.friends.friend2.foto}}" alt="ALT NAME">
+                          <h3>{{usuario.friends.friend2.nombre}}</h3>
+                        <p>
+                          <button  href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Llamar</button>
+                        </p>
+                    </a>
+                  </div>
 
-</body>
+                <div class="col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="{{usuario.friends.friend3.foto}}" alt="ALT NAME">
+                          <h3>{{usuario.friends.friend3.nombre}}</h3>
+                        <p>
+                          <button  href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Llamar</button>
+                        </p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="{{usuario.friends.friend4.foto}}" alt="ALT NAME">
+                          <h3>{{usuario.friends.friend4.nombre}}</h3>
+                        <p>
+                          <button href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Agregar</button>
+                        </p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                  <a href="#" class="thumbnail">
+                      <img src="{{usuario.friends.friend5.foto}}" alt="ALT NAME">
+                        <h3>{{usuario.friends.friend5.nombre}}</h3>
+                      <p>
+                    <button href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Agregar</button>
+                      </p>
+                  </a>
+                </div>
+      </table>
+    </tbody>
+  </div>

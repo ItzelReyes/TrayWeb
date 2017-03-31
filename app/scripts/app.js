@@ -64,7 +64,6 @@ var myApp = angular
         templateUrl: 'views/favoritos.html', //Cambiar nombre por home.html
         controller: 'homeCtrl',
         controllerAs: 'home'
-        
     })
       .when('/friends', {
         templateUrl: 'views/friends.html', //Cambiar nombre por home.html

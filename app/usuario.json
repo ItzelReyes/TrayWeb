@@ -18,6 +18,7 @@
             "friend1":{
                     "nombre": "Daniela",
                     "nickname": "danimartin",
+                    "foto" : "images/dani.jpg",
                     "telefonos":{
                         "fijo": "55234789",
                         "movil": "5589097699"
@@ -26,6 +27,7 @@
             "friend2":{
                     "nombre": "Itzel",
                     "nickname": "itzireyes",
+                    "foto" : "images/itzel.jpg",
                     "telefonos":{
                         "fijo": "55234789",
                         "movil": "5589097699"
@@ -34,6 +36,7 @@
             "friend3":{
                     "nombre": "Alex",
                     "nickname": "alexshark",
+                    "foto" : "images/alex.jpg",
                     "telefonos":{
                         "fijo": "55234789",
                         "movil": "5589097699"
@@ -42,6 +45,7 @@
             "friend4":{
                     "nombre": "Yukio",
                     "nickname": "superyukio",
+                    "foto" : "images/yukio.jpg",
                     "telefonos":{
                         "fijo": "55234789",
                         "movil": "5589097699"
@@ -50,6 +54,7 @@
             "friend5":{
                     "nombre": "José",
                     "nickname": "josesito",
+                    "foto" : "images/jose.jpg",
                     "telefonos":{
                         "fijo": "55234789",
                         "movil": "5589097699"
