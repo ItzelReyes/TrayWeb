@@ -64,7 +64,7 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
         for(var i = 0; i < item.friends.length; i++){
             
             if(item.friends[i].nombre.toUpperCase() == dataSearch.toUpperCase()) { 
-                $log.debug('quien soy:'+item.friends[i].nombre);
+                
                 $mdDialog.show({
                     controller: function Ctrl($scope, $mdDialog, item) {
                     $scope.data = item;
@@ -73,7 +73,7 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
                 targetEvent: ev,
                 templateUrl: "views/show.html",
                 locals: {
-                    item : item
+                    item : item.friends[i]
                 }
             }); 
             }

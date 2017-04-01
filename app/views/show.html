@@ -16,33 +16,33 @@
       </md-toolbar>
       <md-dialog-content>
 <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
-  <h4>{{usuario.friends[0].nombre}}</h4>
+  <h4>{{data.nombre}}</h4>
 
         <div layout="layout" layout-lg>
           <md-input-container style="width:80%">
             <label>Nombre:</label>
             <br>
-            <td>{{usuario.nombre}}<td/>
+            <td>{{data.nombre}}<td/>
           </md-input-container>
         <md-input-container style="width:80%">
             <label>Apellidos:</label>
             <br>
-            <td>{{usuario.apellido}}<td/>
+            <td>{{data.apellido}}<td/>
         </md-input-container>
         <md-input-container style="width:80%">
             <label>Teléfono:</label>
             <br>
-            <td>{{usuario.telefonos.movil}}<td/>
+            <td>{{data.telefonos.movil}}<td/>
           </md-input-container>
           <md-input-container style="width:80%">
             <label>Email:</label>
             <br>
-            <td>{{usuario.email}}<td/>
+            <td>{{data.email}}<td/>
           </md-input-container>    
           <md-input-container style="width:80%">
             <label>Nickname:</label>
             <br>
-            <td>{{usuario.nickname}}<td/>
+            <td>{{data.nickname}}<td/>
           </md-input-container> 
           </div>
           <span class="input-group-btn"> <button class="btn btn-primary" ng-click="hideDialog()">Cerrar</button></span>

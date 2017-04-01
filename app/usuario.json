@@ -1,23 +1,21 @@
 {"usuarios":[
     {   "nombre": "Itzel",
-
         "apellido": "Reyes",
-        
         "telefonos":{ 
             "fijo": "53213478", 
             "movil": "5578925643"
         }, 
 
         "email": "itzel@myemail.com", 
-
         "nickname": "itzelitareyes",
-        
         "password": "d0be2dc421be4fcd0172e5afceea3970e2f3d940",
         
         "friends":[
             {
             "nombre": "Daniela",
+            "apellido": "",
             "nickname": "danimartin",
+            "email": "",
             "foto" : "images/dani.jpg",
                 "telefonos":{
                     "fijo": "55234789",
@@ -28,6 +26,8 @@
             {
             "nombre": "Itzel",
             "nickname": "itzireyes",
+            "email": "itzel@myemail.com",
+            "apellido": "",
             "foto" : "images/itzel.jpg",
                 "telefonos":{
                     "fijo": "55234789",
@@ -37,7 +37,9 @@
 
             {
             "nombre": "Alex",
-            "nickname": "alexshark",
+            "apellido": "Cortizo",
+            "nickname": "blacky991",
+            "email": "alejandro.cortizo@udc.es",
             "foto" : "images/alex.jpg",
                 "telefonos":{
                     "fijo": "55234789",
@@ -47,7 +49,10 @@
             
             {
             "nombre": "Yukio",
+            "apellido": "",
             "nickname": "superyukio",
+            "email": "",
+            "apellido": "",
             "foto" : "images/yukio.jpg",
                 "telefonos":{
                     "fijo": "55234789",
@@ -57,7 +62,9 @@
             
             {
             "nombre": "José",
+            "apellido": "",
             "nickname": "josesito",
+            "email": "",
             "foto" : "images/jose.jpg",
                 "telefonos":{
                     "fijo": "55234789",
