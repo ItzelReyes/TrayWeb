@@ -17,38 +17,50 @@ myApp.controller('LoginCtrl',['$scope','$location', function ($scope,$location) 
         
     };
     
-    var nick;
+    $scope.nick;
+    $scope.pass;
     
     
     $scope.template = 'views/nav.html';
     
     $scope.modelo = modelo;
     $scope.passPattern = /^[a-zA-Z0-9]{8,15}/;
+   
+    
+    
     $scope.getNickname = function () {
         
         if ($scope.nick == undefined) {
-            alert("Error de nickname");
+            $scope.hasError1 = true;
+            console.log("nickIF" + $scope.hasError1);
+            return false;
         } else {
-            $scope.modelo.login.nombreUsuario = $scope.nick;
+            //$scope.modelo.login.nombreUsuario = $scope.nick;
+            
+            $scope.hasError1 = false;
+            console.log("nickElse" + $scope.hasError1);
+            return true;
         }
     }
     
     $scope.getPassword = function() {
         
         if ($scope.pass == undefined) {
-            alert("Error de password");//Highlight en rojo y mensaje aclarativo de que no se introdujo el valor
+            $scope.hasError2 = true;
+            return false;      
         } else {
-            $scope.modelo.login.password = $scope.pass
+            $scope.hasError2 = false;
+            return true;
         }
         
     }
     
     
     $scope.applyLogin = function () {
-        //Se toman los valores del login y se hace algo
-        $scope.getNickname();
-        $scope.getPassword();
-        $location.path('/singup_preferences');
+
+        if ($scope.getNickname() && $scope.getPassword()) {
+            $location.path('/singup_preferences');
+        }
     }
     
   }]);
