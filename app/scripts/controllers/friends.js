@@ -61,23 +61,28 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
     $scope.find = function(ev,dataSearch){
 
       angular.forEach($scope.modelo.usuarios, function(item){
-      if(item.friends[0].nombre == dataSearch) { 
-        $mdDialog.show({
-        controller: function Ctrl($scope, $mdDialog, item) {
-            $scope.data = item;
-        },
-        controllerAs: 'ctrl',
-        targetEvent: ev,
-        templateUrl: "views/show.html",
-        locals: {
-            item : item
+        for(var i = 0; i < item.friends.length; i++){
+            
+            if(item.friends[i].nombre.toUpperCase() == dataSearch.toUpperCase()) { 
+                $log.debug('quien soy:'+item.friends[i].nombre);
+                $mdDialog.show({
+                    controller: function Ctrl($scope, $mdDialog, item) {
+                    $scope.data = item;
+                },
+                controllerAs: 'ctrl',
+                targetEvent: ev,
+                templateUrl: "views/show.html",
+                locals: {
+                    item : item
+                }
+            }); 
+                $scope.notFound = "";
+            }
+           // else{
+            //    return $scope.notFound = "No encontrado";
+           // }
         }
-    }); 
-        $scope.notFound = "";
-      }
-    else{
-         return $scope.notFound = "No encontrado";
-      }
+
       })
     }
 
