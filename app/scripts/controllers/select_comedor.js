@@ -3,7 +3,7 @@
 
 myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog', function(NgMap,$scope,$mdDialog){
     var vm = this;
-    var nombre = "";
+    $scope.nombre = "";
     var modelo = {
         lugar: []
     };
@@ -46,15 +46,15 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog', function(NgMa
     objeto LatLng que representa una latitud y longitud. Con la latitud y longitud
     obtenidas con "geocode" hecho object se cambia la posición del mapa.*/
     $scope.searchComedor = function () {
-        console.log(this.nombre);
+        console.log($scope.nombre);
             $scope.geocoder.geocode
     (
     {
-        'address' : this.nombre
+        'address' : $scope.nombre
     }, function (results,status) {
         if (status == google.maps.GeocoderStatus.OK) {
             var tmp = {
-                nombre : this.nombre,
+                nombre : $scope.nombre,
                 direccion : results[0].formatted_address,
                 latitud : results[0].geometry.location.lat(),
                 longitud : results[0].geometry.location.lng()
