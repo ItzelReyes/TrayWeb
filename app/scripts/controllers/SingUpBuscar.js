@@ -29,5 +29,11 @@ myApp.controller('SingUpBuscarCtrl', function ($scope,$log,$http,$location) {
         //Colectar la informacion de arriba
         $location.path('/favoritos');
     }
+
+    $scope.hideDialog = function() {
+      $mdDialog.hide({
+        });
+
+    }
     
   });

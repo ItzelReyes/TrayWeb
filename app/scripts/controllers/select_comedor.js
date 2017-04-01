@@ -26,6 +26,7 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog', function(NgMa
             controllerAs: 'ctrl',
             targetEvent: ev,
             templateUrl: "views/dialog_comedor.html",
+            clickOutsideToClose: true,
             locals: {
                 loc : location
             }
