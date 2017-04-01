@@ -46,7 +46,7 @@ myApp.controller('HeaderCtrl', function ($scope,$location) {
         //Colectar la informacion de arriba
         $location.path('/reportes');
     }
-       
+    
     $scope.getCerrarSesion = function() {
         //Colectar la informacion de arriba
         $location.path('/');
