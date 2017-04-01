@@ -28,7 +28,7 @@ body{
     font-size: 16px;
 }
 
-h1{
+h1_title {
 	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 	color: #ff8a00;
 }
@@ -101,3 +101,51 @@ th {
 td { background: #FAFAFA; text-align: center; }
 
 tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
+
+/*              CSS FORMULARIOS            */
+
+
+.Absolute-center {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+/*              CSS FAVORITOS            */
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic);
+
+
+
+input {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+}
+
+
+img{
+	align-self: "middle";
+}
+
+.thumb {
+    background: white;
+    border: 1px solid #ddd;
+    height: 100%;
+}
+
+
+
+.col-sm-6 {
+    padding-bottom: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+

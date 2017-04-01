@@ -16,9 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <link rel="stylesheet" type="text/css" href="app/styles/mycss.css">
-    <link rel="stylesheet" type="text/css" href="app/styles/logincss.css">
-    <link rel="stylesheet" type="text/css" href="styles/formularios.css">
-    <link rel="stylesheet" type="text/css" href="styles/favoritoscss.css">
+
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   </head>
 
@@ -42,16 +40,16 @@
           </div>
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
             <ul class="nav navbar-nav">
-            <li><a ng-click="getFavoritos()">Inicio</a></li>
-              <li><a ng-click="getProfile()">Mi perfil</a></li>
-              <li><a ng-click="getBuscarComedor()">Buscar establecimientos</a></li>              
-              <li><a ng-click="getFavoritos()">Favoritos</a></li>
-              <li><a ng-click="getProfile()">Food facts</a></li>
-              <li><a ng-click="getAmigos()">Amigos</a></li>
-              <li><a ng-click="getReportes()">Reportes</a></li>
+            <li><a ng-href="#!/favoritos">Inicio</a></li>
+              <li><a ng-href="#!/perfil">Mi perfil</a></li>
+              <li><a ng-href="#!/singup_buscar_comedor">Buscar establecimientos</a></li>              
+              <li><a ng-href="#!/favoritos">Favoritos</a></li>
+              <li><a ng-href="#!/perfil">Food facts</a></li>
+              <li><a ng-href="#!/friends">Amigos</a></li>
+              <li><a ng-href="#!/reportes">Reportes</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
-                <li><a href="/">Cerrar Sesion</a></li>
+                <li><a href="#!/">Cerrar Sesion</a></li>
             </ul>  
           </div>
       </div>
@@ -67,7 +65,6 @@
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Tray team</p>
       </div>
-    
     </div>
 
 
