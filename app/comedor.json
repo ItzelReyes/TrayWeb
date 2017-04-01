@@ -14,6 +14,7 @@
     },
     "imagen": "images/tec.jpg"
 	},
+    
 	{"nombre": "La Salle",
     "horario": {
     	"manana":true,"tarde": false, "noche": false

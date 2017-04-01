@@ -1,79 +1,79 @@
-<div class="container">
+
+<div class="container" id="tourpackages-carousel">
   <div class="jumbotron" ng-controller="FriendsCtrl">
-    <div class="center">
-        <h2 class="logotipo">Mis amigos</h2>
-        <p class="lead">
-            <img src="images/meal.png" alt="I'm Yeoman"><br>
-        </p>
-        <br>
-        <br>
-        <hr class="style2">
-    </div>       
+    <h2 class="logotipo">Amigos</h2>
+        <!-- First fold -->
+    <p class="lead">
+      <img src="images/meal.png"alt="I'm Yeoman" height="120" width="120"><br>
+    </p>
     <br>
+    <br>
+    <hr class="style2">
+    <br>
+    <br>  
 
-    <div class="form-group has-feedback">
-      <label>Buscar por nombre</label>
-      <input class="form-control" ng-model="search"/>
-      <br>
-      <button class="btn btn-primary" ng-click="find($event,search)">Buscar</button>
-      <span class="glyphicon glyphicon-search form-control-feedback"></span>
-      <h4><span ng-class="label-danger">{{notFound}}</span></h4>
-    </div>
-
-    <table class="TixManagementContent" id="TixManagementContent" width="990px">
-         <tbody>
-           <div class="carousel-inner" id="wrapper">
-              <div class="item active" class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
-                
-                <div class="col-md-4">
-                  <a href="#" class="thumbnail">
-                     <img src="{{usuario.friends.friend1.foto}}" alt="ALT NAME" width=80% >
-                      <h3>{{usuario.friends.friend1.nombre}}</h3>
-                        <p>
-                          <button  href="5567893456" class="btn btn-primary" target="_top">Llamar</button>
-                        </p>
-                  </a>
-                </div>  
-
-                <div class="col-md-4">
-                  <a href="#" class="thumbnail">
-                      <img src="{{usuario.friends.friend2.foto}}" alt="ALT NAME">
-                        <h3>{{usuario.friends.friend2.nombre}}</h3>
-                      <p>
-                        <button  href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Llamar</button>
-                      </p>
-                  </a>
-                </div>
-
-              <div class="col-md-4">
-                  <a href="#" class="thumbnail">
-                      <img src="{{usuario.friends.friend3.foto}}" alt="ALT NAME">
-                        <h3>{{usuario.friends.friend3.nombre}}</h3>
-                      <p>
-                        <button  href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Llamar</button>
-                      </p>
-                  </a>
-              </div>
-
-              <div class="col-md-4">
-                  <a href="#" class="thumbnail">
-                      <img src="{{usuario.friends.friend4.foto}}" alt="ALT NAME">
-                        <h3>{{usuario.friends.friend4.nombre}}</h3>
-                      <p>
-                        <button href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Agregar</button>
-                      </p>
-                  </a>
-              </div>
-
-              <div class="col-md-4">
-                <a href="#" class="thumbnail">
-                    <img src="{{usuario.friends.friend5.foto}}" alt="ALT NAME">
-                      <h3>{{usuario.friends.friend5.nombre}}</h3>
-                    <p>
-                  <button href="http://artsnaplesworldfestival.tix.com/" class="btn btn-primary" target="_top">Agregar</button>
-                    </p>
-                </a>
-              </div>
-    </table>
-    </tbody>
+  <div class="form-group has-feedback">
+    <label>Buscar por Nombre</label>
+    <input class="form-control" ng-model="search"/>
+    <br>
+    <button class="btn btn-primary" ng-click="find($event,search)">Buscar</button>
+    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    <h4><span ng-class="label-danger">{{notFound}}</span></h4>
   </div>
+
+        <!-- end of First Fold -->
+      <table class="TixManagementContent" id="TixManagementContent" width="990px">
+        <tbody>
+          <div class="carousel-inner" id="wrapper">
+          <!-- Contenedor de los thumbnails -->
+            <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
+
+            <div class="col-md-4">
+            <a class="thumbnail">
+                  <h4>{{usuario.friends[0].nombre}}</h4>
+                    <input type="image" id="myimage" src="{{usuario.friends[0].foto}}" height="153">
+                  <p/>    
+                </a>
+            </div>
+
+            <div class="col-md-4">
+            <a class="thumbnail">
+                  <h4>{{usuario.friends[1].nombre}}</h4>
+                    <input type="image" id="myimage" src="{{usuario.friends[1].foto}}">
+                  <p/>    
+                </a>
+            </div>
+
+            <div class="col-md-4">
+            <a class="thumbnail">
+                  <h4>{{usuario.friends[2].nombre}}</h4>
+                    <input type="image" id="myimage" src="{{usuario.friends[2].foto}}">
+                  <p/>    
+                </a>
+            </div>
+
+            <div class="col-md-4">
+            <a class="thumbnail">
+                  <h4>{{usuario.friends[3].nombre}}</h4>
+                    <input type="image" id="myimage" src="{{usuario.friends[3].foto}}">
+                  <p/>    
+                </a>
+            </div>
+
+            <div class="col-md-4">
+            <a class="thumbnail">
+                  <h4>{{usuario.friends[4].nombre}}</h4>
+                    <input type="image" id="myimage" src="{{usuario.friends[4].foto}}">
+                  <p/>    
+                </a>
+            </div>
+          <!-- end contenedor de los thumbnails -->
+          </tbody>
+          </table>
+        <br>
+          <br>
+      </div>  
+    </div>
+    </div><!-- End container -->
+    
+      

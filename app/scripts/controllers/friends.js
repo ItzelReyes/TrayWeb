@@ -61,7 +61,7 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
     $scope.find = function(ev,dataSearch){
 
       angular.forEach($scope.modelo.usuarios, function(item){
-      if(item.friends.friend1.nombre == dataSearch) { 
+      if(item.friends[0].nombre == dataSearch) { 
         $mdDialog.show({
         controller: function Ctrl($scope, $mdDialog, item) {
             $scope.data = item;
@@ -74,9 +74,11 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
         }
     }); 
         $scope.notFound = "";
-      }else{
+      }
+    else{
          return $scope.notFound = "No encontrado";
       }
       })
     }
+
   });
