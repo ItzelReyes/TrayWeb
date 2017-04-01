@@ -53,16 +53,21 @@ myApp.controller('UsuarioCtrl', function ($scope,$log,$http,$location,$mdDialog)
 
     }
     
-    $scope.showDialog = function(ev,usuario) {        
+    $scope.showDialog = function(ev) {       
     $mdDialog.show({
-        controller: function Ctrl($scope, $mdDialog, usuario) {
-            $scope.data = usuario;
+        //La función del controller toma una variable a ser inyectada definida en "locals", en este caso usuario
+        controller: function Ctrl($scope,usuario) {
+            console.log(usuario.nombre);
+            $scope.usuario = usuario;
+
         },
         controllerAs: 'ctrl',
         targetEvent: ev,
         templateUrl: "views/dialog.html",
-        locals: {
-            usuario : usuario
+        locals: { //Todo lo que se pase en locals se inyecta
+            usuario : $scope.modelo.usuarios[0]
+            //Se define un atributo que contendrá aquello que se quiera inyectar
+            //en este caso queremos inyectar el primer elemento del vector de usuarios
         }
     });    
         

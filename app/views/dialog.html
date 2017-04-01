@@ -14,24 +14,28 @@
             <label>Nombre:</label>
             <input ng-model="usuario.nombre" placeholder="{{usuario.nombre}}"/>
           </md-input-container>
+            <md-br>
         <md-input-container style="width:80%">
             <label>Apellidos:</label>
             <input ng-model="usuario.apellido" placeholder="{{usuario.apellido}}"/>
           </md-input-container>
+        <md-br>
         <md-input-container style="width:80%">
             <label>Teléfono:</label>
             <input ng-model="usuario.telefonos.movil" placeholder="{{usuario.telefonos.movil}}"/>
           </md-input-container>
+        <md-br>
           <md-input-container style="width:80%">
             <label>Email:</label>
             <input ng-model="usuario.email" placeholder="{{usuario.email}}"/>
-          </md-input-container>    
+          </md-input-container>
+        <md-br>
           <md-input-container style="width:80%">
             <label>Nickname:</label>
             <input ng-model="usuario.nickname" placeholder="{{usuario.nickname}}"/>
-          </md-input-container>         
+          </md-input-container>
           </div>  
-          <span class="input-group-btn"> <button class="btn btn-primary" ng-click="hideDialog()">Modificar</button></span>
+          <span class="input-group-btn"> <button class="btn btn-primary" ng-click="dime()">Modificar</button></span>
       </md-dialog-content>
 </md-dialog>
 </div>
