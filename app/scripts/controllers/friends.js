@@ -35,10 +35,10 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
     $scope.find = function(ev,dataSearch){
 
       angular.forEach($scope.modelo.usuarios, function(item){
+        var flag=false;
+        
         for(var i = 0; i < item.friends.length; i++){
-            
-            if(item.friends[i].nombre.toUpperCase() == dataSearch.toUpperCase()) { 
-                
+            if(item.friends[i].nombre.toUpperCase() == dataSearch.toUpperCase()){ 
                 $mdDialog.show({
                     controller: function Ctrl($scope, $mdDialog, item) {
                     $scope.data = item;
@@ -51,9 +51,14 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
                     item : item.friends[i]
                 }
             }); 
+            $scope.notFound = "";
+            flag = true;     
             }
         }
-        
+        if(flag == false){
+            return $scope.notFound = "No encontrado";
+            alert("hola");
+        }
       })
     }
 
