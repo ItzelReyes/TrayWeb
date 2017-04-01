@@ -76,13 +76,12 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
                     item : item
                 }
             }); 
-                $scope.notFound = "";
             }
-           // else{
-            //    return $scope.notFound = "No encontrado";
-           // }
+            else{
+                break;
+            } 
         }
-
+        alert(dataSearch + " No encontrado");
       })
     }
 
