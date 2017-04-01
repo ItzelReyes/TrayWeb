@@ -1,26 +1,33 @@
-    <div class="jumbotron" ng-controller="SingUpBuscarCtrl">      
-        <div class="center">
-            <h2 class="logotipo">Buscar</h2>
-                <p class="lead">
-                    <img src="images/meal.png" alt="I'm Yeoman"><br>
-                </p>
-            <br>
-            <br>
-            <hr class="style2">
-        </div>       
+    
+
+<div class="jumbotron" ng-controller="SingUpBuscarCtrl">      
+    <div class="center">
+        <h2 class="logotipo">Buscar</h2>
+            <p class="lead">
+                <img src="images/meal.png" alt="I'm Yeoman"><br>
+            </p>
         <br>
+        <br>
+        <hr class="style2">
+    </div>       
+    <br>
+        
+<!-- Estructura de mapa con botón search -->        
   <div class="row">
-            <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                    <input type="text" ng-map-autocomplete ng-model="autocomplete" class="form-control input-lg" placeholder="Buscar" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </div>
+    <div id="custom-search-input">
+        <div class="input-group col-md-12">
+            <input type="text" ng-map-autocomplete ng-model="nombre" class="form-control input-lg" placeholder="Buscar" />
+            <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button" ng-click="searchComedor()">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
   </div>
+<!-- Fin Estructura -->
+        
+        
       <br>
       <br>
       <br>
