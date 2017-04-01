@@ -18,7 +18,6 @@ angular.module('myApp')
     resultado.sort(function (a, b) {
       return (a[key] > b[key] ? 1 : -1);
     });
-    if(buttonF == true ) resultado.reverse();
     return resultado;
   };
 
