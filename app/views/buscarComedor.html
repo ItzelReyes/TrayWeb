@@ -1,5 +1,3 @@
-    
-
 <div class="jumbotron" ng-controller="SingUpBuscarCtrl">      
     <div class="center">
         <h2 class="logotipo">Buscar</h2>
@@ -32,14 +30,24 @@
       <br>
       <br>
       <ng-map  zoom="18" center="current-position">
-        <map-data load-geo-json="events.json"></map-data>
+        <map-data></map-data>
       </ng-map>
         <br>
         <br>
+    
+        <div class="row center" ng-repeat="x in modelo.lugar">            
+            <div class="row hand-this" ng-click="showDialog($event,x)">
+                <a><h1>{{x.nombre}}</h1>
+                    <br>
+                    <h2>{{x.direccion}}</h2>
+                </a>
+            </div>
+        </div>
+    
       
         <div class="row center">
             <p>
-            <a class="btn btn-lg btn-success" ng-click="getFav2()">Finalizar<span ></span></a>
+            <a class="btn btn-lg btn-success" href="#!/favoritos">Finalizar<span ></span></a>
           </p>            
         </div>
     </div>

@@ -19,6 +19,9 @@ myApp.controller('LoginCtrl',['$scope','$location', function ($scope,$location) 
     
     var nick;
     
+    
+    $scope.template = 'views/nav.html';
+    
     $scope.modelo = modelo;
     $scope.passPattern = /^[a-zA-Z0-9]{8,15}/;
     $scope.getNickname = function () {

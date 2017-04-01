@@ -9,8 +9,6 @@
  */
 
 
-
-
 myApp.controller('HeaderCtrl', function ($scope,$location) {
      var  modelo={
     };

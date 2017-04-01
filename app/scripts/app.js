@@ -82,7 +82,7 @@ var myApp = angular
     })
       .when('/editarPreferencias', {
         templateUrl: 'views/editarPreferencias.html',
-        controller: 'EditarPreferenciasCtrl',
+        controller: 'UsuarioCtrl',
         controllerAs: 'editPref'
     })
       .when('/preferencias', {

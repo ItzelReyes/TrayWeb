@@ -1,53 +1,24 @@
-<head>
-    <link rel="stylesheet" href="styles/dialog.css">
-</head>
+<div class="jumbotron" ng-controller="UsuarioCtrl">
+<div class="row">
+    <br>
 
-<div ng-controller="UsuarioCtrl">
+      <div class="col-md-6 col-xs-12 center">
+        <img src="images/profile.png" alt="I'm Yeoman" width="50%">
+      </div>
 
-
-<md-dialog class="fullscreen-dialog" aria-label="Full Screen Dialog Test">
-      <md-toolbar>
-        <div class="md-toolbar-tools">
-          <md-button class="md-icon-button" ng-click="closeDialog()">
-            <md-icon class="fa fa-times fa-2x"></md-icon>
-          </md-button>
-          <h2 flex="flex">Ver</h2>
+        <div class="col-md-6 col-xs-12">
+          <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
+            <h2>Datos personales</h2>
+            <hr class="solid">
+            <p> Nombre: {{data.nombre}}</p>
+            <p> Apellidos: {{data.apellido}}</p>
+            <p> Teléfono: {{data.telefonos.movil}}</p>
+            <p> E-mail: {{data.email}}</p>
+            <p> Nickname: {{data.nickname}}</p>
+            <hr class="solid">                
+          </div>    
         </div>
-      </md-toolbar>
-      <md-dialog-content>
-<div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
-  <h4>{{data.nombre}}</h4>
+        
 
-        <div layout="layout" layout-lg>
-          <md-input-container style="width:80%">
-            <label>Nombre:</label>
-            <br>
-            <td>{{data.nombre}}<td/>
-          </md-input-container>
-        <md-input-container style="width:80%">
-            <label>Apellidos:</label>
-            <br>
-            <td>{{data.apellido}}<td/>
-        </md-input-container>
-        <md-input-container style="width:80%">
-            <label>Teléfono:</label>
-            <br>
-            <td>{{data.telefonos.movil}}<td/>
-          </md-input-container>
-          <md-input-container style="width:80%">
-            <label>Email:</label>
-            <br>
-            <td>{{data.email}}<td/>
-          </md-input-container>    
-          <md-input-container style="width:80%">
-            <label>Nickname:</label>
-            <br>
-            <td>{{data.nickname}}<td/>
-          </md-input-container> 
-          </div>
-          <span class="input-group-btn"> <button class="btn btn-primary" ng-click="hideDialog()">Cerrar</button></span>
-          <br>
-      </md-dialog-content>
-</div>
-</md-dialog>
+    </div>
 </div>

@@ -24,39 +24,13 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
             $log.debug("errorCallback");
         });
     $scope.modelo = modelo;
-/*
-    $scope.getFav = function() {
-        //Colectar la informacion de arriba
-        $location.path('/favoritos');
-    }
-    
-    $scope.getBuscarComedor = function() {
-        //Colectar la informacion de arriba
-        $location.path('/singup_buscar_comedor');
-    }
-*/
 
     $scope.hideDialog = function() {
-//      $scope.notFound = "Si esdsdsdsdssncontrado";
       $mdDialog.hide({
         });
 
     }
 
-    $scope.showDialog = function(ev,usuario) {        
-    $mdDialog.show({
-        controller: function Ctrl($scope, $mdDialog, usuario) {
-            $scope.data = usuario;
-        },
-        controllerAs: 'ctrl',
-        targetEvent: ev,
-        templateUrl: "views/dialog.html",
-        locals: {
-            usuario : usuario
-        }
-    });    
-        
-    };
 
     $scope.find = function(ev,dataSearch){
 
@@ -72,16 +46,14 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
                 controllerAs: 'ctrl',
                 targetEvent: ev,
                 templateUrl: "views/show.html",
+                clickOutsideToClose: true,
                 locals: {
                     item : item.friends[i]
                 }
             }); 
             }
-          //  else{
-           //     break;
-           // } 
         }
-        //alert(dataSearch + " No encontrado");
+        
       })
     }
 
