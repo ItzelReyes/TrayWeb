@@ -43,25 +43,3 @@
       </div>    
     </div>
     <!-- End container -->  
-
-
-
-          <table class="TixManagementContent" id="TixManagementContent" width="990px">
-        <tbody>
-          <div class="carousel-inner" id="wrapper">
-          <!-- Contenedor de los thumbnails -->
-            <div class="animate-repeat" ng-repeat="comedor in modelo.comedores | restaurantes:'nombre'">
-
-            <div class="col-md-4">
-            <a class="thumbnail">
-                  <h4>Cafetería de Universidad {{comedor.nombre}}</h4>
-                  <p ng-click="enviarControlador($index)">  
-                  <p>
-                    <input type="image" id="myimage" src="{{comedor.imagen}}">
-                  <p/>    
-                </a>
-            </div>
-          <!-- end contenedor de los thumbnails -->
-          </tbody>
-          </table>  
-      
