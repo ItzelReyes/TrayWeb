@@ -2,7 +2,9 @@
     <link rel="stylesheet" href="styles/dialog.css">
 </head>
 
-<div ng-controller="DialogCtrl">
+<div ng-controller="UsuarioCtrl">
+
+
 <md-dialog class="fullscreen-dialog" aria-label="Full Screen Dialog Test">
       <md-toolbar>
         <div class="md-toolbar-tools">
@@ -13,6 +15,9 @@
         </div>
       </md-toolbar>
       <md-dialog-content>
+<div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
+  <h4>{{usuario.friends[0].nombre}}</h4>
+
         <div layout="layout" layout-lg>
           <md-input-container style="width:80%">
             <label>Nombre:</label>
@@ -43,5 +48,6 @@
           <span class="input-group-btn"> <button class="btn btn-primary" ng-click="hideDialog()">Cerrar</button></span>
           <br>
       </md-dialog-content>
+</div>
 </md-dialog>
 </div>

@@ -67,7 +67,7 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
                 $log.debug('quien soy:'+item.friends[i].nombre);
                 $mdDialog.show({
                     controller: function Ctrl($scope, $mdDialog, item) {
-                    $scope.data = item.friends[i].nombre;
+                    $scope.data = item;
                 },
                 controllerAs: 'ctrl',
                 targetEvent: ev,
