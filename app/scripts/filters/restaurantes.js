@@ -10,7 +10,7 @@
  */
 angular.module('myApp')
   .filter('restaurantes', function () {
-  	return function(items, key, reverse, buttonF) {
+  	return function(items, key) {
     var resultado = [];
     angular.forEach(items, function(item) {
       resultado.push(item);
