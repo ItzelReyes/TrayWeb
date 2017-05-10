@@ -4,4 +4,13 @@ model {
 	Usuarios usuarios
 }
 
-json g.render(usuarios)
+json{
+
+	id usuarios.id
+	nombreCompleto usuarios.nombre+" "+usuarios.apellido
+	nickname usuarios.nickname
+	email usuarios.email
+	PrefComidas g.render(usuarios.comidas, [deep: true]) 
+	PrefAlergias g.render(usuarios.alergias, [deep:true])
+}
+
