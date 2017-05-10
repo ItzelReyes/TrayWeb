@@ -7,7 +7,7 @@ class Friends {
 	String apellido
 	String nickname
 	String email
-	Sbyte[] avatar
+	byte[] avatar
   	String avatarType
 
     static constraints = {

@@ -14,7 +14,9 @@ class Usuarios {
 	int edad
    // PrefAlergias alergias
   //  PrefComidas comidas
-    static hasMany = [comidas: PrefComidas, alergias: PrefAlergias, enfermedades: PrefEnfermedades]
+    static hasMany = [comidas: PrefComidas, alergias: PrefAlergias, enfermedades: PrefEnfermedades, pDiarias:PrefDiarias]
+
+    static belongsTo = PrefDiarias
 
     static constraints = {
     	nickname unique:true

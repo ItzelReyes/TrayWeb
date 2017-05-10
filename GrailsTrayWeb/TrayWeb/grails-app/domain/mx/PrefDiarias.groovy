@@ -9,6 +9,8 @@ class PrefDiarias {
 	boolean pollo
 	boolean vegetariano
 	//Usuarios usuarios
+	
+	static hasMany = [usuarios:Usuarios]
 
     static constraints = {
     	res defaultValue:false
