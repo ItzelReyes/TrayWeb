@@ -1,4 +1,4 @@
-package TrayWeb
+package trayweb
 import mx.*
 
 class BootStrap {
@@ -8,7 +8,7 @@ class BootStrap {
     				apellido: "Martin",
     				telefono: "5523899177",
     				email: "dani@mail.com",
-    				nickname: "dani",
+    				nickname: "daniMM",
     				edad:"30",
     				password: "123456").save()
     }

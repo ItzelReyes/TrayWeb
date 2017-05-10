@@ -1,7 +1,9 @@
 package mx
+
 import grails.rest.*
 
 @Resource(readOnly = false, formats = ['json', 'xml'])
+
 class Usuarios {
 	String nombre
 	String apellido
