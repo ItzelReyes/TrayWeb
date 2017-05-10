@@ -11,7 +11,7 @@ class BootStrap {
         def e1 = new PrefEnfermedades(colesterol: false, diabetes: false, hipertesion: true, trigliceridos: false).save()
         def pd1 = new PrefDiarias(res: false, pescado: false, pollo: true, vegetariano: true).save()
 
-    	new Usuarios(nombre: "Daniela",
+    	def u1 = new Usuarios(nombre: "Daniela",
     				apellido: "Martin",
     				telefono: "5523899177",
     				email: "dani@mail.com",
@@ -23,7 +23,9 @@ class BootStrap {
                     enfermedades:[e1],
                     pDiarias:[pd1]).save()
 
+        // pd1.addToUsuarios(u1)
     }
+   
 
     def destroy = {
     }

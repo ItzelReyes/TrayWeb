@@ -15,7 +15,7 @@ class Usuarios {
     PrefAlergias alergias
     PrefComidas comidas
     PrefEnfermedades enfermedades
-    //PrefDiarias pDiarias
+
     static hasMany = [pDiarias:PrefDiarias]
 
 
