@@ -8,6 +8,8 @@ class BootStrap {
         def c1 = new PrefComidas(res: true, pescado: false, pollo: true, vegetariano: false).save()
         def c2 = new PrefComidas(res: false, pescado: false, pollo: false, vegetariano: true).save()
         def a1 = new PrefAlergias(gluten: false, cacahuate: false, lactosa: true, huevo: false, almidon: false, soya: false).save()
+        def e1 = new PrefEnfermedades(colesterol: false, diabetes: false, hipertesion: true, trigliceridos: false).save()
+
     	new Usuarios(nombre: "Daniela",
     				apellido: "Martin",
     				telefono: "5523899177",
@@ -16,7 +18,9 @@ class BootStrap {
     				edad:"30",
     				password: "123456", 
                     comidas:[c1],
-                    alergias:[a1]).save()
+                    alergias:[a1],
+                    enfermedades:[e1]).save()
+
     }
     def destroy = {
     }

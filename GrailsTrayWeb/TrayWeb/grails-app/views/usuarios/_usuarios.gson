@@ -12,5 +12,6 @@ json{
 	email usuarios.email
 	PrefComidas g.render(usuarios.comidas, [deep: true]) 
 	PrefAlergias g.render(usuarios.alergias, [deep:true])
+	PrefEnfermedades g.render(usuarios.enfermedades, [deep:true])
 }
 
