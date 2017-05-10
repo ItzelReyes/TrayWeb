@@ -10,8 +10,9 @@ class BootStrap {
         def a1 = new PrefAlergias(gluten: false, cacahuate: false, lactosa: true, huevo: false, almidon: false, soya: false).save()
         def e1 = new PrefEnfermedades(colesterol: false, diabetes: false, hipertesion: true, trigliceridos: false).save()
         def pd1 = new PrefDiarias(res: false, pescado: false, pollo: true, vegetariano: true).save()
+        def comedor1 = new Comedor(nombre: "ITESM CCM", telefono:"54832020", latitud:"19.2826837", longitud:"-99.1372735").save()
 
-    	def u1 = new Usuarios(nombre: "Daniela",
+    	new Usuarios(nombre: "Daniela",
     				apellido: "Martin",
     				telefono: "5523899177",
     				email: "dani@mail.com",
@@ -23,7 +24,6 @@ class BootStrap {
                     enfermedades:[e1],
                     pDiarias:[pd1]).save()
 
-        // pd1.addToUsuarios(u1)
     }
    
 

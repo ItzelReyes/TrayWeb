@@ -16,7 +16,7 @@ class Usuarios {
     PrefComidas comidas
     PrefEnfermedades enfermedades
 
-    static hasMany = [pDiarias:PrefDiarias]
+    static hasMany = [pDiarias:PrefDiarias, comedores: Comedor]
 
 
     static constraints = {

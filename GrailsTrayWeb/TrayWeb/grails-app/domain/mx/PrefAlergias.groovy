@@ -10,7 +10,6 @@ class PrefAlergias {
 	boolean huevo
 	boolean almidon
 	boolean soya
-	//Usuarios usuarios
 
     static constraints = {
     	gluten defaultValue:false
