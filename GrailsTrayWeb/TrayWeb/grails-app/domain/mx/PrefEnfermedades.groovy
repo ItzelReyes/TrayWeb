@@ -8,7 +8,6 @@ class PrefEnfermedades {
 	boolean diabetes
 	boolean hipertension
 	boolean trigliceridos
-	//Usuarios usuarios
 
     static constraints = {
     	colesterol defaultValue:false

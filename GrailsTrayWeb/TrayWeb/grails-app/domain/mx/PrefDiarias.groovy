@@ -10,7 +10,9 @@ class PrefDiarias {
 	boolean vegetariano
 	//Usuarios usuarios
 	
-	static hasMany = [usuarios:Usuarios]
+	//static hasMany = [usuarios: Usuarios]
+    //static belongsTo = Usuarios
+
 
     static constraints = {
     	res defaultValue:false

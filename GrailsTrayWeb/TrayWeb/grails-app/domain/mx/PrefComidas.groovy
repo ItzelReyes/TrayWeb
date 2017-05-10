@@ -8,8 +8,7 @@ class PrefComidas {
 	boolean pescado
 	boolean pollo
 	boolean vegetariano 
-
-	//Usuarios usuarios
+	
     static constraints = {
     	res defaultValue:false
     	pescado defaultValue:false

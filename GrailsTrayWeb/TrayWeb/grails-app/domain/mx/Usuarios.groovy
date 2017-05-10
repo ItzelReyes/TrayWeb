@@ -11,12 +11,13 @@ class Usuarios {
 	String email
 	String nickname
 	String password
-	int edad
-   // PrefAlergias alergias
-  //  PrefComidas comidas
-    static hasMany = [comidas: PrefComidas, alergias: PrefAlergias, enfermedades: PrefEnfermedades, pDiarias:PrefDiarias]
+	int    edad
+    PrefAlergias alergias
+    PrefComidas comidas
+    PrefEnfermedades enfermedades
+    //PrefDiarias pDiarias
+    static hasMany = [pDiarias:PrefDiarias]
 
-    static belongsTo = PrefDiarias
 
     static constraints = {
     	nickname unique:true
