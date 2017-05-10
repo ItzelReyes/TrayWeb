@@ -12,6 +12,7 @@ class UrlMappings {
         patch "/$controller/$id(.$format)?"(action:"patch")
         */
         "/usuarios"(resources:"mx.Usuarios")
+        "/comedores"(resources:"mx.Comedor")
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')
         "404"(view: '/notFound')

@@ -9,8 +9,8 @@ class Comedor {
 	String latitud
 	String longitud
 
-	//static hasMany = [Usuarios]
-   // static belongsTo = Usuarios
+	static hasMany = [Usuarios]
+    static belongsTo = Usuarios
 
     static constraints = {
     	nombre unique:true
