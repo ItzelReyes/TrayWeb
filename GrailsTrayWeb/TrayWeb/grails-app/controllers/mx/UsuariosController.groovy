@@ -8,5 +8,4 @@ class UsuariosController extends RestfulController {
 	UsuariosController(){
 		super(Usuarios)
 	}
-    def index() { }
 }
