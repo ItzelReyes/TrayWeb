@@ -13,6 +13,7 @@ class UrlMappings {
         */
         "/usuarios"(resources:"mx.Usuarios")
         "/comedores"(resources:"mx.Comedor")
+        "/friends"(resources:"mx.Friends")
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')
         "404"(view: '/notFound')

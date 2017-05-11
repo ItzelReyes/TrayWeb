@@ -13,6 +13,7 @@ class BootStrap {
         def comedor1 = new Comedor(nombre: "ITESM CCM", telefono:"54832020", celular: "3456789", latitud:"19.28268337", longitud:"-99.13712735").save()
         def comedor2 = new Comedor(nombre: "La Salle", telefono:"5482322020",celular: "3431434", latitud:"19.28261837", longitud:"-99.137217").save()
         def comedor3 = new Comedor(nombre: "UVM Tlalpan", telefono:"5523127822",celular: "23227291", latitud:"19.282618137", longitud:"-99.121735").save()
+        def f1 = new Friends(nombre:"Ricardo", apellido:"S", nickname:"RichiBu", email:"ricardo@mail.com").save()
     	new Usuarios(nombre: "Daniela",
     				apellido: "Martin",
     				telefono: "5523899177",
@@ -49,7 +50,8 @@ class BootStrap {
                     alergias:[a1],
                     enfermedades:[e1],
                     pDiarias:[pd1],
-                    comedores:[comedor1, comedor2]).save()
+                    comedores:[comedor1, comedor2],
+                    friends: [f1]).save()
 
     }
    

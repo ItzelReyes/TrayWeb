@@ -9,6 +9,9 @@ class Friends {
 	String email
 	byte[] avatar
   	String avatarType
+  	
+  	static hasMany = [Usuarios]
+    static belongsTo = Usuarios
 
     static constraints = {
     	nickname unique:true

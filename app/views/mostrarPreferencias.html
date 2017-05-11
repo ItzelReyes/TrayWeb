@@ -12,17 +12,17 @@
             </div>       
             <br>
 
-            <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
+            <div class="animate-repeat" ng-model="modelo.usuarios">
                 <h2>Comida</h2>
                 <hr class="solid">
-                <p> Res: {{usuario.preferencias.comida.res}}</p>
-                <p> Pollo: {{usuario.preferencias.comida.pollo}}</p>
+                <p> Res: {{modelo.usuarios.PrefAlergias.almidon}}</p>
+                <p> Pollo: {{modelo.usuarios.preferencias.comida.pollo}}</p>
                 <h2>Alergias</h2>
                 <hr class="solid"> 
-                <p> Pollo: {{usuario.preferencias.comida.pollo}}</p>
+                <p> Pollo: {{modelo.usuarios.preferencias.comida.pollo}}</p>
                 <h2>Enfermedades</h2>  
                 <hr class="solid"> 
-                <p>Triglicéridos: {{usuario.preferencias.enfermedades.trigliceridos}}</p>
+                <p>Triglicéridos: {{modelo.usuarios.preferencias.enfermedades.trigliceridos}}</p>
 
             </div>    
         </div>

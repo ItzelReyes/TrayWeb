@@ -16,5 +16,6 @@ json{
 	PrefEnfermedades g.render(usuarios.enfermedades, [deep:true])
 	PrefDiarias g.render(usuarios.pDiarias, [deep:true])
 	Comedores g.render(usuarios.comedores, [deep:true])
+	Friends g.render(usuarios.friends, [deep:true])
 }
 

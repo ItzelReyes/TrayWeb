@@ -16,10 +16,10 @@ myApp.controller('FriendsCtrl', function ($scope,$log,$http,$location,SharedData
 
    $http({
         method: 'GET',
-        url: '/usuario.json'
+        url: 'http://localhost:8080/friends'
         }).then(function successCallback(response) {
-            $log.debug("successCallback"+response.data.usuarios);
-            $scope.modelo.usuarios = response.data.usuarios
+            $log.debug("successCallback"+response.data);
+            $scope.modelo.friends = response.data
           }, function errorCallback(response) {
             $log.debug("errorCallback");
         });
