@@ -16,15 +16,21 @@ myApp.controller('UsuarioCtrl', function ($scope,$log,$http,$location,$mdDialog)
     };
 
   
-   $http({
-        method: 'GET',
-        url: '/usuario.json'
-        }).then(function successCallback(response) {
-            $log.debug("successCallback"+response.data.usuarios);
-            $scope.modelo.usuarios = response.data.usuarios
+   $http.get('http://localhost:8080/usuarios/2')
+   .then(function successCallback(response) {
+            $log.debug("successCallback"+response.data);
+            $scope.modelo.usuarios = response.data
           }, function errorCallback(response) {
             $log.debug("errorCallback");
         });
+
+   /* $scope.listado = function(){
+        $http.get('http://localhost:8080/usuarios/1')
+        .then(function(response){
+            var listado = response.data;
+            $scope.usuarios = listado;
+        });
+    }*/
     $scope.modelo = modelo;
    
 
