@@ -1,6 +1,6 @@
     <div class="container">
 :
-        <div class="jumbotron">
+        <div class="jumbotron" ng-controller="ReservacionCtrl">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -10,19 +10,20 @@
                             <br>
                             <br>                        
                     </div>
-                    <div class="Absolute-center">
-                        <div class="form-group input-group">
-                            <span class="input-group-addon"></span>
-                            <input class="form-control" type="date" id="nickname" placeholder="Día">
-                            
-                        </div>
-                        <div class="form-group input-group">
-                            <span class="input-group-addon"></span>
-                            <input class="form-control" type="time" id="password" placeholder="Hora">
-                        </div>
-                        <div class="form-group">
-                            <p><a class="btn btn-lg btn-success" href="#!/favoritos" onclick="notif()">Reservar <span ></span></a></p>
-                        </div>
+                    <div>
+                        <p>Fecha: 
+                        <input type="text" name="fecha" ng-model="fecha"></p>
+                        <p>Hora: 
+                        <input type="text" name="hora" ng-model="hora"></p>
+                        <p>Res: 
+                        <input type="text" name="res" ng-model="res"></p>
+                        <p>Pollo: 
+                        <input type="text" name="pollo" ng-model="pollo"></p>
+                        <p>Pescado: 
+                        <input type="text" name="pescado" ng-model="pescado"></p>
+                        <p>Vegetariano: 
+                        <input type="text" name="vegetariano" ng-model="vegetariano"></p>
+                        <button type="button" ng-click="reservar()">Reservar</button>{{resultadoInsercion}}
                     </div>
                 </div>
             </div>
