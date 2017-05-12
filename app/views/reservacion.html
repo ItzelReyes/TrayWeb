@@ -1,6 +1,6 @@
     <div class="container">
 :
-        <div class="jumbotron" ng-controller="ReservacionCtrl">
+        <div class="jumbotron">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -10,20 +10,24 @@
                             <br>
                             <br>                        
                     </div>
-                    <div>
-                        <p>Fecha: 
-                        <input type="text" name="fecha" ng-model="fecha"></p>
-                        <p>Hora: 
-                        <input type="text" name="hora" ng-model="hora"></p>
-                        <p>Res: 
-                        <input type="text" name="res" ng-model="res"></p>
-                        <p>Pollo: 
-                        <input type="text" name="pollo" ng-model="pollo"></p>
-                        <p>Pescado: 
-                        <input type="text" name="pescado" ng-model="pescado"></p>
-                        <p>Vegetariano: 
-                        <input type="text" name="vegetariano" ng-model="vegetariano"></p>
-                        <button type="button" ng-click="reservar()">Reservar</button>{{resultadoInsercion}}
+                    <div class="Absolute-center">
+                      <h2>Elige tus preferencias</h2>
+                      <input type="checkbox" name="preferencias" value="res" ng-model="res">Res<br>
+                      <input type="checkbox" name="preferencias" value="pescado" ng-model="pescado">Pescado<br>
+                      <input type="checkbox" name="preferencias" value="pollo" ng-model="pollo">Pollo<br>
+                      <input type="checkbox" name="preferencias" value="vegetariano" ng-model="vegetariano">Vegetariano<br>            
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"></span>
+                            <input class="form-control" type="date" id="fecha" placeholder="Día" ng-model="fecha">
+                            
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"></span>
+                            <input class="form-control" type="text" id="hora" placeholder="Hora" ng-model="hora">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" ng-click="reservar()">Reservar</button>{{resultadoInsercion}}                        
+                        </div>
                     </div>
                 </div>
             </div>

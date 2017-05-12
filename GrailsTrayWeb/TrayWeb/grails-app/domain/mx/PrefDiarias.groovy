@@ -4,19 +4,19 @@ import grails.rest.*
 @Resource(readOnly = false, formats = ['json', 'xml'])
 class PrefDiarias {
 
-    String fecha
+    Date fecha = new Date()
     String hora
-	String res
-	String pescado
-	String pollo
-	String vegetariano
+	boolean res
+	boolean pescado
+	boolean pollo
+	boolean vegetariano
 
     static constraints = {
         fecha blank:false
         hora blank:false
-    	res blank:false
-    	pescado blank:false
-    	pollo blank:false
-    	vegetariano blank:false
+    	res defaultValue:false
+    	pescado defaultValue:false
+    	pollo defaultValue:false
+    	vegetariano defaultValue:false
     }
 }

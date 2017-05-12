@@ -9,7 +9,7 @@ class BootStrap {
         def c2 = new PrefComidas(res: false, pescado: false, pollo: false, vegetariano: true).save()
         def a1 = new PrefAlergias(gluten: false, cacahuate: false, lactosa: true, huevo: false, almidon: false, soya: false).save()
         def e1 = new PrefEnfermedades(colesterol: false, diabetes: false, hipertesion: true, trigliceridos: false).save()
-        def pd1 = new PrefDiarias(fecha:"17 mayo 2017", hora:"13:00", res:"no", pescado:"si", pollo:"no", vegetariano:"si").save()
+        def pd1 = new PrefDiarias(fecha: fecha, hora:"13:00", res:true, pescado:false, pollo:false, vegetariano:false).save()
         def comedor1 = new Comedor(nombre: "ITESM CCM", telefono:"54832020", celular: "3456789", latitud:"19.28268337", longitud:"-99.13712735").save()
         def comedor2 = new Comedor(nombre: "La Salle", telefono:"5482322020",celular: "3431434", latitud:"19.28261837", longitud:"-99.137217").save()
         def comedor3 = new Comedor(nombre: "UVM Tlalpan", telefono:"5523127822",celular: "23227291", latitud:"19.282618137", longitud:"-99.121735").save()
