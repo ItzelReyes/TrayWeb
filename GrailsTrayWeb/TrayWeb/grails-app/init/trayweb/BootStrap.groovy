@@ -14,6 +14,7 @@ class BootStrap {
         def comedor2 = new Comedor(nombre: "La Salle", telefono:"5482322020",celular: "3431434", latitud:"19.28261837", longitud:"-99.137217").save()
         def comedor3 = new Comedor(nombre: "UVM Tlalpan", telefono:"5523127822",celular: "23227291", latitud:"19.282618137", longitud:"-99.121735").save()
         def f1 = new Friends(nombre:"Ricardo", apellido:"S", nickname:"RichiBu", email:"ricardo@mail.com").save()
+
     	new Usuarios(nombre: "Daniela",
     				apellido: "Martin",
     				telefono: "5523899177",

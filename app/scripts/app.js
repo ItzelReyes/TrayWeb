@@ -110,6 +110,11 @@ var myApp = angular
         controller: 'DialogCtrl',
         controllerAs: 'dialog'
     })
+      .when('/myFriends', {
+        templateUrl: 'views/myFriends.html',
+        controller: 'UsuarioCtrl',
+        controllerAs: 'misAmigos'
+    })
       .otherwise({
         redirectTo: '/'
       });
