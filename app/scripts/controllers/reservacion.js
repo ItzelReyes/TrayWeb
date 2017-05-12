@@ -8,13 +8,7 @@
  * Controller of the claseAngularApp
  */
 myApp.controller('ReservacionCtrl', function ($scope, $http, $window) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
-
+   
 $scope.reservar = function(){
 	var reservacionInsertar = {
  	  	"fecha": $scope.fecha,
@@ -31,3 +25,5 @@ $scope.reservar = function(){
    			$scope.resultadoInsercion =  respuesta;
     		});
 }
+
+  });
