@@ -9,16 +9,19 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog', function(NgMa
     };
     $scope.modelo = modelo;
     $scope.geocoder = new google.maps.Geocoder();
-    
-    
+
+
     //Accesso al servicio del mapa
     NgMap.getMap().then(function(map) {
         vm.map = map;
-    });
-    
 
-    
-    $scope.showDialog = function(ev,location) {                
+
+
+
+    });
+
+
+    $scope.showDialog = function(ev,location) {
         $mdDialog.show({
             controller: function Ctrl($scope, $mdDialog, loc) {
                 $scope.direccionLugar = loc;
@@ -30,19 +33,19 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog', function(NgMa
             locals: {
                 loc : location
             }
-        });    
+        });
     };
-    
-    
-    
+
+
+
     /*La función searchComedor accede al método geocode del API geocoder de Google
     de tal forma que cuando se busca algo a través del input con ng-map-autocomplete
     se toma el texto con ng-model y se obtiene a través del servicio las coordenadas.
-    
+
     El retorno de geocode devuelve a través de status la confirmación de que la consulta
     tuvo éxito o fracaso; a través de results devuelve un object que contiene un vector
     con todos los campos informativos, en este caso interesan las coordenadas.
-    
+
     El método de ngMap que controla el mapa "setCenter", toma como parámetro un
     objeto LatLng que representa una latitud y longitud. Con la latitud y longitud
     obtenidas con "geocode" hecho object se cambia la posición del mapa.*/
@@ -63,20 +66,39 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog', function(NgMa
 
             var latlng = new google.maps.LatLng(tmp.latitud, tmp.longitud);
             vm.map.setCenter(latlng);
-            
-            var marker = new google.maps.Marker(
+
+            $scope.marker = new google.maps.Marker(
             {
                  map: vm.map,
                  position: latlng,
+                 title: $scope.nombre,
 
              });
+
+            google.maps.event.addListener($scope.marker,'click',function() {
+              $mdDialog.show({
+                  controller: function Ctrl($scope, $mdDialog, loc) {
+                      $scope.direccionLugar = loc;
+                  },
+                  controllerAs: 'ctrl',
+                  templateUrl: "views/dialog_comedor.html",
+                  clickOutsideToClose: true,
+                  locals: {
+                      loc : location
+                  }
+              });
+            });
+
+
+
             $scope.$apply($scope.modelo.lugar.push(tmp));
-            console.log($scope.modelo.lugar);
+            //console.log($scope.modelo.lugar);
         }
     }
     );
-      
-
-        
     };
+
+
+
+
 }]);

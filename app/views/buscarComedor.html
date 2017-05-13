@@ -1,4 +1,4 @@
-<div class="jumbotron" ng-controller="SingUpBuscarCtrl">      
+<div class="jumbotron" ng-controller="SingUpBuscarCtrl">
     <div class="center">
         <h2 class="logotipo">Buscar</h2>
             <p class="lead">
@@ -7,10 +7,10 @@
         <br>
         <br>
         <hr class="style2">
-    </div>       
+    </div>
     <br>
-        
-<!-- Estructura de mapa con botón search -->        
+
+<!-- Estructura de botón search con autocompletar -->
   <div class="row">
     <div id="custom-search-input">
         <div class="input-group col-md-12">
@@ -24,18 +24,21 @@
     </div>
   </div>
 <!-- Fin Estructura -->
-        
-        
+
+<!-- Estructura del mapa de google -->
       <br>
       <br>
       <br>
       <ng-map  zoom="18" center="current-position">
         <map-data></map-data>
+
       </ng-map>
         <br>
         <br>
-    
-        <div class="row center" ng-repeat="x in modelo.lugar">            
+<!-- Fin de Estructura -->
+
+
+        <div class="row center" ng-repeat="x in modelo.lugar">
             <div class="row hand-this" ng-click="showDialog($event,x)">
                 <a><h3>{{x.nombre}}</h3>
                     <br>
@@ -43,12 +46,11 @@
                 </a>
             </div>
         </div>
-    
-      
+
+
         <div class="row center">
             <p>
             <a class="btn btn-lg btn-success" href="#!/favoritos">Finalizar<span ></span></a>
-          </p>            
+          </p>
         </div>
     </div>
-  
