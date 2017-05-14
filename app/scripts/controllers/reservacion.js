@@ -7,7 +7,7 @@
  * # ReservacionCtrl
  * Controller of the claseAngularApp
  */
-myApp.controller('ReservacionCtrl', function ($scope, $http, $window) {
+myApp.controller('ReservacionCtrl', function ($scope, $http, $window,$location) {
    
 $scope.reservar = function(){
 	var reservacionInsertar = {
