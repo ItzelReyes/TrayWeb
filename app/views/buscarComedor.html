@@ -9,8 +9,13 @@
         <hr class="style2">
     </div>
     <br>
+<<<<<<< HEAD
         <h3>Introduzca el nombre del establecimiento o la dirección de su establecimiento favorito:</h3>
 <!-- Estructura de mapa con botón search -->
+=======
+
+<!-- Estructura de botón search con autocompletar -->
+>>>>>>> GrailsTrayWeb
   <div class="row">
     <div id="custom-search-input">
         <div class="input-group col-md-12">
@@ -25,19 +30,33 @@
   </div>
 <!-- Fin Estructura -->
 
+<<<<<<< HEAD
 
+=======
+<!-- Estructura del mapa de google -->
+>>>>>>> GrailsTrayWeb
       <br>
       <br>
       <br>
       <ng-map  zoom="18" center="current-position">
         <map-data></map-data>
+
       </ng-map>
         <br>
         <br>
+<<<<<<< HEAD
         <h3>Mis establecimientos:</h3>
         <div class="row center" ng-repeat="x in modelo.lugar">
 
                   <h3>{{x.nombre}}</h3>
+=======
+<!-- Fin de Estructura -->
+
+
+        <div class="row center" ng-repeat="x in modelo.lugar">
+            <div class="row hand-this" ng-click="showDialog($event,x)">
+                <a><h3>{{x.nombre}}</h3>
+>>>>>>> GrailsTrayWeb
                     <br>
                     <h4>{{x.direccion}}</h4>
 

@@ -1,0 +1,24 @@
+package trayweb
+
+class UrlMappings {
+
+    static mappings = {
+        /*
+        delete "/$controller/$id(.$format)?"(action:"delete")
+        get "/$controller(.$format)?"(action:"index")
+        get "/$controller/$id(.$format)?"(action:"show")
+        post "/$controller(.$format)?"(action:"save")
+        put "/$controller/$id(.$format)?"(action:"update")
+        patch "/$controller/$id(.$format)?"(action:"patch")
+        */
+
+        "/usuarios"(resources:"mx.Usuarios")
+        "/comedores"(resources:"mx.Comedor")
+        "/comedores/searchComedor"(controller:"Comedor",action:"searchComedor")
+        "/friends"(resources:"mx.Friends")
+        "/prefDiarias"(resources:"mx.PrefDiarias")
+        "/"(controller: 'application', action:'index')
+        "500"(view: '/error')
+        "404"(view: '/notFound')
+    }
+}

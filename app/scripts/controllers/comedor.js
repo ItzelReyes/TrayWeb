@@ -16,10 +16,10 @@ myApp.controller('ComedorCtrl', function ($scope,$log,$http,$location, SharedDat
 
    $http({
         method: 'GET',
-        url: '/comedor.json'
+        url: 'http://localhost:8080/comedores'
         }).then(function successCallback(response) {
-            $log.debug("successCallback"+response.data.comedores);
-            $scope.modelo.comedores = response.data.comedores
+            $log.debug("successCallback"+response.data);
+            $scope.modelo.comedores = response.data
           }, function errorCallback(response) {
             $log.debug("errorCallback");
         });

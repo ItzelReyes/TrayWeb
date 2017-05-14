@@ -1,6 +1,6 @@
     <div class="container">
 :
-        <div class="jumbotron">
+        <div class="jumbotron" ng-controller="ReservacionCtrl">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -10,19 +10,18 @@
                             <br>
                             <br>                        
                     </div>
-                    <div class="Absolute-center">
-                        <div class="form-group input-group">
-                            <span class="input-group-addon"></span>
-                            <input class="form-control" type="date" id="nickname" placeholder="Día">
-                            
-                        </div>
-                        <div class="form-group input-group">
-                            <span class="input-group-addon"></span>
-                            <input class="form-control" type="time" id="password" placeholder="Hora">
-                        </div>
-                        <div class="form-group">
-                            <p><a class="btn btn-lg btn-success" href="#!/favoritos" onclick="notif()">Reservar <span ></span></a></p>
-                        </div>
+                    <div>
+                          <h2>Elige tus preferencias del día:</h2>
+                          <input type="checkbox" name="preferencias" value="Res" ng-model="res">Res<br>
+                          <input type="checkbox" name="preferencias" value="Pescado" ng-model="pescado">Pescado<br>
+                          <input type="checkbox" name="preferencias" value="Pollo" ng-model="pollo">Pollo<br>
+                          <input type="checkbox" name="preferencias" value="Vegetariano" ng-model="vegetariano">Vegetariano<br>            
+                        <br>
+                        <p>Fecha: 
+                        <input type="text" name="fecha" ng-model="fecha"></p>
+                        <p>Hora: 
+                        <input type="text" name="hora" ng-model="hora"></p>
+                        <button type="button" ng-click="reservar()">Reservar</button>{{resultadoInsercion}}
                     </div>
                 </div>
             </div>

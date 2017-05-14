@@ -19,16 +19,16 @@
       </div>
 
         <div class="col-md-6 col-xs-12">
-          <div class="animate-repeat" ng-repeat="usuario in modelo.usuarios">
+          <div class="animate-repeat" ng-model="modelo.usuarios">
+
             <h2>Datos personales</h2>
             <hr class="solid">
-            <p> Nombre: {{usuario.nombre}}</p>
-            <p> Apellidos: {{usuario.apellido}}</p>
-            <p> Teléfono: {{usuario.telefonos.movil}}</p>
-            <p> E-mail: {{usuario.email}}</p>
-            <p> Nickname: {{usuario.nickname}}</p>
+            <p> Nombre: {{modelo.usuarios.nombreCompleto}}</p>
+            <p> Teléfono: {{modelo.usuarios.telefono}}</p>
+            <p> E-mail: {{modelo.usuarios.email}}</p>
+            <p> Nickname: {{modelo.usuarios.nickname}}</p>
             <hr class="solid">                
-          </div>    
+          </div> 
         </div>
         
         <div class="row">

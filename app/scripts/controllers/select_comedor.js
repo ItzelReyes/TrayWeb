@@ -9,7 +9,11 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', funct
     };
     $scope.modelo = modelo;
     $scope.geocoder = new google.maps.Geocoder();
+<<<<<<< HEAD
     $scope.modelo.prueba = "Prueba"
+=======
+
+>>>>>>> GrailsTrayWeb
 
     //Accesso al servicio del mapa
     NgMap.getMap().then(function(map) {
@@ -21,6 +25,7 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', funct
     });
 
 
+<<<<<<< HEAD
     // $scope.showDialog = function(ev,location) {
     //     $mdDialog.show({
     //         controller: function Ctrl($scope, $mdDialog, loc) {
@@ -35,6 +40,22 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', funct
     //         }
     //     });
     // };
+=======
+    $scope.showDialog = function(ev,location) {
+        $mdDialog.show({
+            controller: function Ctrl($scope, $mdDialog, loc) {
+                $scope.direccionLugar = loc;
+            },
+            controllerAs: 'ctrl',
+            targetEvent: ev,
+            templateUrl: "views/dialog_comedor.html",
+            clickOutsideToClose: true,
+            locals: {
+                loc : location
+            }
+        });
+    };
+>>>>>>> GrailsTrayWeb
 
 
 
@@ -76,6 +97,7 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', funct
              });
 
             google.maps.event.addListener($scope.marker,'click',function() {
+<<<<<<< HEAD
 
                //Busca en el servidor que se tenga el comedor
               //console.log("Aquí")
@@ -137,6 +159,39 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', funct
             });
 
 
+=======
+              var url = 'http://localhost:8080/comedores/searchComedor?latitud='+$scope.marker.position.lat()+'&longitud='+$scope.marker.position.lng()
+
+              $http.get(url)
+              .then(function successCallback(response) {
+                       //$log.debug("successCallback"+response.data);
+                       console.log("successCallback"+response.data)
+                       $scope.modelo.comedor = response.data
+                     }, function errorCallback(response) {
+                       //$log.debug("errorCallback");
+                       console.console.log("errorCallback");
+                   });
+
+              console.log($scope.modelo.comedor)
+
+              $mdDialog.show({
+                  controller: function Ctrl($scope, $mdDialog, loc) {
+                      $scope.direccionLugar = loc;
+                  },
+                  controllerAs: 'ctrl',
+                  templateUrl: "views/dialog_comedor.html",
+                  clickOutsideToClose: true,
+                  locals: {
+                      loc : location
+                  }
+              });
+            });
+
+
+
+            $scope.$apply($scope.modelo.lugar.push(tmp));
+            //console.log($scope.modelo.lugar);
+>>>>>>> GrailsTrayWeb
         }
     }
     );
@@ -145,6 +200,9 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', funct
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> GrailsTrayWeb
 }]);
