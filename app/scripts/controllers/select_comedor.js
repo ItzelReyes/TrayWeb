@@ -1,7 +1,7 @@
 'use strict'
 
 
-myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog', function(NgMap,$scope,$mdDialog){
+myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', function(NgMap,$scope,$mdDialog,$http){
     var vm = this;
     $scope.nombre = "";
     var modelo = {
@@ -76,6 +76,20 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog', function(NgMa
              });
 
             google.maps.event.addListener($scope.marker,'click',function() {
+              var url = 'http://localhost:8080/comedores/searchComedor?latitud='+$scope.marker.position.lat()+'&longitud='+$scope.marker.position.lng()
+
+              $http.get(url)
+              .then(function successCallback(response) {
+                       //$log.debug("successCallback"+response.data);
+                       console.log("successCallback"+response.data)
+                       $scope.modelo.comedor = response.data
+                     }, function errorCallback(response) {
+                       //$log.debug("errorCallback");
+                       console.console.log("errorCallback");
+                   });
+
+              console.log($scope.modelo.comedor)
+
               $mdDialog.show({
                   controller: function Ctrl($scope, $mdDialog, loc) {
                       $scope.direccionLugar = loc;

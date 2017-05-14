@@ -11,8 +11,10 @@ class UrlMappings {
         put "/$controller/$id(.$format)?"(action:"update")
         patch "/$controller/$id(.$format)?"(action:"patch")
         */
+
         "/usuarios"(resources:"mx.Usuarios")
         "/comedores"(resources:"mx.Comedor")
+        "/comedores/searchComedor"(controller:"Comedor",action:"searchComedor")
         "/friends"(resources:"mx.Friends")
         "/prefDiarias"(resources:"mx.PrefDiarias")
         "/"(controller: 'application', action:'index')

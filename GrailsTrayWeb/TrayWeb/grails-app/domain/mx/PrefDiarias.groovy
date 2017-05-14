@@ -4,7 +4,7 @@ import grails.rest.*
 @Resource(readOnly = false, formats = ['json', 'xml'])
 class PrefDiarias {
 
-    String fecha
+    Date fecha
     String hora
     boolean res
     boolean pescado
