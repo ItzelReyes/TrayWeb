@@ -11,7 +11,6 @@
 <!-- Fin del FirstFold -->
     
 <!-- Form de registro -->    
-  <form class="Absolute-center" name="myForm">
     <div class="form-group">
       <label for="example-search-input" class="col-2 col-form-label control-label">Nombre:</label>
       <input class="form-control" ng-model="nombre" type="text" id="nombre" required>
@@ -19,33 +18,37 @@
 
     <div class="form-group">
       <label for="example-search-input" class="col-2 col-form-label">Apellidos:</label>
-      <input class="form-control" type="text" id="apellidos">
+      <input class="form-control" type="text" id="apellido" ng-model="apellido">
     </div>
 
     <div class="form-group">
       <label for="example-search-input" class="col-2 col-form-label">Teléfono:</label>
-      <input class="form-control" type="text" id="telefono">
+      <input class="form-control" type="text" id="telefono" ng-model="telefono">
     </div>
 
     <div class="form-group">
       <label for="example-search-input" class="col-2 col-form-label">E-mail:</label>
-      <input class="form-control" type="text" id="email">
+      <input class="form-control" type="text" id="email" ng-model="email">
     </div>
 
     <div class="form-group">
       <label for="example-search-input" class="col-2 col-form-label">Nickname:</label>
-      <input class="form-control" type="text" id="nickname">
+      <input class="form-control" type="text" id="nickname" ng-model="nickname">
+    </div>
+
+    <div class="form-group">
+      <label for="example-search-input" class="col-2 col-form-label">Edad:</label>
+      <input class="form-control" type="text" id="edad" ng-model="edad">
     </div>
 
     <div class="form-group">
       <label for="example-search-input" class="col-2 col-form-label">Password:</label>
-      <input class="form-control" type="Password" name= "pass" id="password" ng-class="{'has-error': myForm.pass.$invalid}">
+      <input class="form-control" type="password" name="password" id="password" ng-class="{'has-error': myForm.pass.$invalid}" ng-model="password">
     </div>
 
     <p class="center">
-      <a class="btn btn-lg btn-success" ng-click="getRegister()">Next <span ></span></a>
+      <!--<a class="btn btn-lg btn-success" ng-click="getRegister()">Next <span ></span></a>-->
+      <button type="button" ng-click="registrar()">Registrar</button>{{resultadoInsercion}}
     </p>
-
-  </form>
 </div>
 <!-- Fin del Form de registro -->    

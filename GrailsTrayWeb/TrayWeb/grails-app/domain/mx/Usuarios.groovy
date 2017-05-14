@@ -27,5 +27,8 @@ class Usuarios {
     	email email:true
     	password blank:false
     	edad min:10, max:80
+        alergias nullable:true 
+        comidas nullable:true
+        enfermedades nullable:true
     }
 }
