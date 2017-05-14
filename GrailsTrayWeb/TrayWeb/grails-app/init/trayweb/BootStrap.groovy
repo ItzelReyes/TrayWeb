@@ -54,6 +54,10 @@ class BootStrap {
                     comedores:[comedor1, comedor2],
                     friends: [f1]).save()
 
+        Role rol1 = new Role("ROLE_ADMIN").save()
+        User user1 = new User("Administrador","Luigi54").save()
+        UserRole.create(user1,rol1,true)
+
     }
    
 
