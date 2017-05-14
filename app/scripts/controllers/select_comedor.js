@@ -15,27 +15,7 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', funct
     NgMap.getMap().then(function(map) {
         vm.map = map;
 
-
-
-
     });
-
-
-    $scope.showDialog = function(ev,location) {
-        $mdDialog.show({
-            controller: function Ctrl($scope, $mdDialog, loc) {
-                $scope.direccionLugar = loc;
-            },
-            controllerAs: 'ctrl',
-            targetEvent: ev,
-            templateUrl: "views/dialog_comedor.html",
-            clickOutsideToClose: true,
-            locals: {
-                loc : location
-            }
-        });
-    };
-
 
 
     /*La función searchComedor accede al método geocode del API geocoder de Google
@@ -76,43 +56,64 @@ myApp.controller('SingUpBuscarCtrl',['NgMap','$scope','$mdDialog','$http', funct
              });
 
             google.maps.event.addListener($scope.marker,'click',function() {
-              var url = 'http://localhost:8080/comedores/searchComedor?latitud='+$scope.marker.position.lat()+'&longitud='+$scope.marker.position.lng()
 
-              $http.get(url)
-              .then(function successCallback(response) {
-                       //$log.debug("successCallback"+response.data);
-                       console.log("successCallback"+response.data)
-                       $scope.modelo.comedor = response.data
-                     }, function errorCallback(response) {
-                       //$log.debug("errorCallback");
-                       console.console.log("errorCallback");
-                   });
 
-              console.log($scope.modelo.comedor)
+               //Busca en el servidor que se tenga el comedor
+              //console.log("Aquí")
+              var promise = new Promise (function(resolve,reject) {
+                var url = 'http://localhost:8080/comedores/searchComedor?latitud='+
+                $scope.marker.position.lat()+'&longitud='+$scope.marker.position.lng()
 
-              $mdDialog.show({
-                  controller: function Ctrl($scope, $mdDialog, loc) {
-                      $scope.direccionLugar = loc;
-                  },
-                  controllerAs: 'ctrl',
-                  templateUrl: "views/dialog_comedor.html",
-                  clickOutsideToClose: true,
-                  locals: {
-                      loc : location
-                  }
+                $http.get(url)
+               .then(function successCallback(response) {
+
+                     resolve(response.data)
+                      }, function errorCallback(response) {
+                        reject(response)
+                    });
               });
-            });
 
 
+              promise.then(
+                function(data) {
+                  $scope.modelo.c = data
+                  $mdDialog.show(
+                    {
+                      controller: function Ctrl($scope,comedor,tmp) {
+                        $scope.comedor = comedor;
 
-            $scope.$apply($scope.modelo.lugar.push(tmp));
-            //console.log($scope.modelo.lugar);
-        }
+                        $scope.agregar = function (ev) {
+                          tmp.push(comedor)
+                        }
+                      },
+                      controllerAs: 'ctrl',
+                      templateUrl: "views/dialog_comedor_acceptance.html",
+                      clickOutsideToClose: true,
+                      locals: {
+                        comedor : $scope.modelo.c,
+                        tmp : $scope.modelo.lugar
+                      }
+                  })
+                },
+                function(error) {
+                  $mdDialog.show(
+                    {
+                      controller: function Ctrl($scope) {
+                      },
+                      controllerAs: 'ctrl',
+                      templateUrl: "views/dialog_comedor_not_found.html",
+                      clickOutsideToClose: true,
+                  })
+                }
+              )
+
+
+            });//Finlistener
+
+        }//geocoder
     }
     );
-    };
-
-
+  };//searchComedor
 
 
 }]);
