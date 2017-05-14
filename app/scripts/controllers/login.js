@@ -7,8 +7,24 @@
  * # MainCtrl
  * Controller of the claseAngularApp
  */
-myApp.controller('LoginCtrl',['$scope','$location', function ($scope,$location) {
+myApp.controller('LoginCtrl',['$scope','$location', function ($scope,$location,$http,$window) {
     
+    if($window.sessionStorage.token){
+        $scope.logeado= true;
+    }else{
+        $scope.logeado=false;
+    }
+
+    $scope.login = function(){
+        $http.post('http://localhost:8080/api/login',{
+            username : $scope.username,
+            password : $scope.password
+        }).then(function(response){
+            $scope.autentificado = "adentro";
+            $scope.logeado= true;
+            $window.sessionStorage.token = response.data.access_token
+        });
+    };
     var modelo = {
         login : {
             nombreUsuario: "",

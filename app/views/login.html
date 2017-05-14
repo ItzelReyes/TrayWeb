@@ -1,6 +1,6 @@
 <div class="jumbotron" ng-controller="LoginCtrl">
         
-    <h1>TRAY!</h1>
+    <h1>TRAY! {{autentificado}} {{logeado}}</h1>
     <p class="lead">
         <img src="images/meal.png" alt="I'm Yeoman"><br>
         Reserva con aticipación y ayuda a tu ciudad.
@@ -12,18 +12,18 @@
             <span class="input-group-addon">
                 <i class="glyphicon glyphicon-user"></i>
             </span>
-            <input class="form-control" ng-model="nick" type="text" id="nickname" placeholder="Nickname">
+            <input class="form-control" ng-model="username" type="text" id="username" placeholder="username">
         </div>
 
         <form name="myForm">
             <div class="form-group input-group" ng-class="{'has-error': hasError2}">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
                 </span>
-                <input class="form-control" ng-model="pass" type="password" id="password" placeholder="Password" ng-pattern="passPattern">
+                <input class="form-control" ng-model="password" type="password" id="password" placeholder="password" ng-pattern="passPattern">
             </div>
         </form>
         <div class="form-group">
-            <p><a class="btn btn-lg btn-success" ng-click="applyLogin()">Log in <span ></span></a></p>
+            <p><a class="btn btn-lg btn-success" ng-click="login()">Log in <span ></span></a></p>
         </div>
     </div>    
 </div>
