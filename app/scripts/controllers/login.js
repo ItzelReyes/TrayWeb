@@ -68,7 +68,7 @@ myApp.controller('LoginCtrl',['$scope','$location', '$http', '$window', function
     
     $scope.applyLogin = function () {
 
-            $location.path('/singup_preferences');
+            $location.path('/favoritos');
     }
     
   }]);
