@@ -1,6 +1,6 @@
 'use strict';
 
-myApp.controller('SingUpCtrl',['$scope','$location', function($scope,$location,$http,$window) {
+myApp.controller('SingUpCtrl',['$scope','$location','$http', function($scope,$location,$http,$window) {
 
 $scope.registrar = function(){
     var registroInsertar = {
@@ -11,11 +11,10 @@ $scope.registrar = function(){
         "nickname": $scope.nickname,
         "edad" : $scope.edad,
         "password" : $scope.password,
-        "comidas": null,
-        "enfermedades": null,
-        "alergias": null
+       // "comidas": null,
+      //  "enfermedades": null,
+      //  "alergias": null
     }
-    
     $http.post('http://localhost:8080/usuarios', registroInsertar)
         .then(function(response){
             var respuesta = response.data;

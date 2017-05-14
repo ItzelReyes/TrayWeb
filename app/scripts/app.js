@@ -3,7 +3,11 @@
 var myApp = angular
   .module('myApp', ['ngAnimate','ngCookies','ngResource','ngRoute','ngSanitize','ngTouch','ngMap','ngMapAutocomplete','angularReverseGeocode','ngMaterial']);
 
-  myApp.config(function ($routeProvider) {
+  myApp.config(function ($routeProvider, $httpProvider) {
+
+    $httpProvider.defaults.useXDomain =true
+    delete $httpProvider.defaults.headers.common['X-Requested-With']
+;
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

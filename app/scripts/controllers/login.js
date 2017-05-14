@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the claseAngularApp
  */
-myApp.controller('LoginCtrl',['$scope','$location', function ($scope,$location,$http,$window) {
+myApp.controller('LoginCtrl',['$scope','$http','$location', function ($scope,$location,$http,$window) {
     
     if($window.sessionStorage.token){
         $scope.logeado= true;
