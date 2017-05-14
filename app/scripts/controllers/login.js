@@ -68,9 +68,7 @@ myApp.controller('LoginCtrl',['$scope','$location', '$http', '$window', function
     
     $scope.applyLogin = function () {
 
-        if ($scope.getNickname() && $scope.getPassword()) {
             $location.path('/singup_preferences');
-        }
     }
     
   }]);

@@ -26,4 +26,8 @@ $scope.reservar = function(){
     		});
 }
 
+    $scope.getFavoritos = function() {
+        //Colectar la informacion de arriba
+        $location.path('/favoritos');
+    }
   });
